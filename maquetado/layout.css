@@ -1,0 +1,176 @@
+    /*
+    * Skeleton V1.2
+    * Copyright 2011, Dave Gamache
+    * www.getskeleton.com
+    * Free to use under the MIT license.
+    * http://www.opensource.org/licenses/mit-license.php
+    * 6/20/2012
+    */
+
+    /* Table of Content
+    ==================================================
+    	#Site Styles
+    	#Page Styles
+    	#Media Queries
+    	#Font-Face */
+
+    /* #Site Styles
+    ================================================== */
+    html{height: 100%;}
+    body                          {
+        height: 100%;
+        font-family: arial; 
+        font-size: 62.5%;
+    }
+    
+    /* #Page Styles
+    ================================================== */
+    /* Globales */
+    .banner{width: 100%; min-height: 60px;background: #E6E6E6;text-align: center;}
+    .he100{height: 100px; line-height: 100px;}
+    .he200{height: 200px;line-height: 200px;}
+    .he300{height: 300px;line-height: 300px;}
+    .banner p{font-family: helvetica,color:#333; font-size: 1.6em; display: inline-block;vertical-align: middle;line-height: normal;}
+    .titulo{height: 60px;background: #E6E6E6;}
+    .w100{width: 100px;}
+    .w200{width: 200px;}
+    .w300{width: 300px;}
+    .w1{width: 100%;display: block;}
+    .w2{width: 50%;display: block;}
+    .w3{width: 25%;display: block;}
+    .maut{margin: 0 auto;}
+    .texto{height: 20px;background: #E6E6E6; margin-bottom: 10px;}
+    .he400{height: 400px;line-height: 400px;}
+
+    header{background: #f2f2f2;}
+    header   i{font-size: 2.5em; }
+
+    /* Style */
+    .slider{width: 100%;min-height: 300px;background: #f2f2f2; text-align: center;}
+    .servicios{min-height: 200px;padding: 40px 0;text-align: center;}
+    .portafolio{min-height: 200px;padding: 60px 0;text-align: center;}
+    .clientes{min-height: 200px;padding: 60px 0;text-align: center;}
+    .clientes ul{margin: 0;padding: 0;}
+    .clientes ul li{margin: 20px 1%; width: 15%;float: left;}
+    .clientes ul li:first-child{margin-left:0;}
+    .clientes ul li:last-child{margin-right: 0;}
+    .equipo{min-height: 200px;padding: 40px 0;text-align: center;}
+    .piepag{min-height: 200px;padding: 30px 0;text-align: center;}
+    .derechos{min-height: 50px;padding: 60px 0;text-align: center;}
+    .serv{min-height: 200px;padding: 40px 0;text-align: center;}
+    .paquetes{min-height: 200px;padding: 40px 0;text-align: center;}
+    .comienza{min-height: 50px;padding: 60px 0;text-align: center;}
+    .equipo{min-height: 200px;padding: 40px 0;text-align: center;}
+    .mv{min-height: 200px;padding: 40px 0;text-align: center;}
+    .acerca{min-height: 200px;padding: 40px 0;text-align: center;}
+    .acerca-equipo{min-height: 200px;padding: 40px 0;text-align: center;}
+    .portafolios{min-height: 200px;padding: 40px 0;text-align: center;}
+    .frase{background: #f2f2f2;}
+    .frase .frase{text-align: center; font-size: 1.5em}
+  
+    /* #Media Queries
+    ================================================== */
+
+    /* Bigger than 1280px */
+    @media only screen and (min-width: 1300px) {
+
+
+    }
+
+    @media only screen and (max-height: 768px) {
+      
+
+    }
+
+    /* Smaller than standard 960 (devices and browsers) */
+    @media only screen and (max-width: 959px) {}
+
+
+
+            /* Tablet Portrait size to standard 960 (devices and browsers) */
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+
+  
+
+    }
+
+    /* All Mobile Sizes (devices and browser) */
+    @media only screen and (max-width: 767px) {
+        .clientes ul li{margin: 20px 1%; width: 32%}
+        .clientes ul li:nth-child(3){margin-right: 0;}
+        .clientes ul li:nth-child(4){margin-left: 0;}
+    
+         
+    }
+
+    /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+    @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    @media only screen and (max-width: 479px) {
+        .clientes ul li{margin: 20px 2%; width: 47%}
+        .clientes ul li:nth-child(2){margin-right: 0;}
+        .clientes ul li:nth-child(3){margin-left: 0;margin-right: 2%;}
+        .clientes ul li:nth-child(4){margin-right: 0;margin-left: 2%;}
+        .clientes ul li:nth-child(5){margin-left: 0;}
+       
+    }
+
+
+    /* #Font-Face
+    ================================================== */
+    /* 	This is the proper syntax for an @font-face file
+    		Just create a "fonts" folder at the root,
+    		copy your FontName into code below and remove
+    		comment brackets */
+    
+    @font-face {
+        font-family: 'overpassbold';
+        src: url('fonts/overpass/Overpass-bold.eot');
+        src: url('fonts/overpass/Overpass-bold.eot?#iefix') format('embedded-opentype'),
+             url('fonts/overpass/Overpass-bold.woff') format('woff'),
+             url('fonts/overpass/Overpass-bold.ttf') format('truetype'),
+             url('fonts/overpass/Overpass-bold.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'bebas';
+        src: url('fonts/bebas/BEBAS-webfont.eot');
+        src: url('fonts/bebas/BEBAS-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/bebas/BEBAS-webfont.woff') format('woff'),
+             url('fonts/bebas/BEBAS-webfont.ttf') format('truetype'),
+             url('fonts/bebas/BEBAS-webfont.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'custom';
+        src:url('fonts/custom/icomoon.eot?-f1ilph');
+        src:url('fonts/custom/icomoon.eot?#iefix-f1ilph') format('embedded-opentype'),
+            url('fonts/custom/icomoon.woff?-f1ilph') format('woff'),
+            url('fonts/custom/icomoon.ttf?-f1ilph') format('truetype'),
+            url('fonts/custom/icomoon.svg?-f1ilph#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+        font-family: 'custom';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+
+    .icon-menu:before {
+    content: "\e900";
+    }
