@@ -51,8 +51,9 @@
     header .menu a{text-decoration: none;}
     header   i{font-size: 2.5em; }
 
-    .slider{width: 100%;min-height: 300px; line-height: 300px;background: #f2f2f2; text-align: center;background: url(../img/slider.jpg);background-size: cover;}
+    .slider{width: 100%;min-height: 300px; line-height: 300px; background-color: #656a6e; text-align: center;background-image: url(../img/slider.jpg);background-size: cover;  background-blend-mode: multiply;}
     .slider .descripcion h4{font-family: 'avenirHeavy';padding-top: 100px; line-height: 1em;font-size: 5em; color: #fff; text-align: center;}
+
 
 
 
@@ -84,8 +85,8 @@
     ================================================== */
 
     /* Bigger than 1280px */
-    @media only screen and (min-width: 1300px) {
-
+    @media only screen and (min-width: 1600px) {
+    .slider{min-height: 450px;}
 
     }
 
