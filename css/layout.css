@@ -30,7 +30,7 @@
     .he100{height: 100px; line-height: 100px;}
     .he200{height: 200px;line-height: 200px;}
     .he300{height: 300px;line-height: 300px;}
-    .banner p{font-family: helvetica;color:#333; font-size: 1.6em; display: inline-block;vertical-align: middle;line-height: normal;}
+    .banner p{font-family: helvetica;color:#333; font-size: 1.6em; display: inline-block;vertical-align: middle;line-height: normal; text-align: center;}
     .titulo{height: 60px;background: #E6E6E6;}
     .w100{width: 100px;}
     .w200{width: 200px;}
@@ -43,6 +43,7 @@
     .he400{height: 400px;line-height: 400px;}
 
     body{background: #f2f2f2;}
+    h1,h2,h3,h4,h5,h6{font-family: 'avenirHeavy';}
     header{background: #fff; height: 80px; width: 100%;}
     header .logo{width: 200px; height: 56px; margin: 7px auto 0 auto; }
     header .logo a{ display: block; width: 100%; height: 100%;  background: url(../img/logo.svg); background-size: cover;}
@@ -51,33 +52,42 @@
     header .menu a{text-decoration: none;}
     header   i{font-size: 2.5em; }
 
+    /* PAGINA PRINCIPAL */
+
     .slider{width: 100%;min-height: 300px; line-height: 300px; background-color: #656a6e; text-align: center;background-image: url(../img/slider.jpg);background-size: cover;  background-blend-mode: multiply;}
-    .slider .descripcion h4{font-family: 'avenirHeavy';padding-top: 100px; line-height: 1em;font-size: 5em; color: #fff; text-align: center;}
-
-
+    .slider .descripcion h4{font-family: 'avenirHeavy';padding-top: 100px; line-height: 1em;font-size: 4.5em; color: #fff; text-align: center;}
+    
+    .servicios{min-height: 200px; padding: 30px 0 40px 0;}
+    .servicios .opciones{width: 100%;  height: 55px; border-bottom: 1px solid #e6e6e6;}
+    .servicios .opciones h3{float: left; }
+    .servicios .opciones ul{width: 300px; height: 55px; float: right;}
+    .servicios .opciones ul li{width: 50%; float: left; height: 55px;}
+    .servicios .opciones ul li a{display: block; width: 100%; height: 100%; background: #e6e6e6; text-align: center; text-decoration: none; color: #666; font-family: 'avenirHeavy'; font-size: 1.6em; line-height: 3.5em;}
+    .servicios .opciones ul li.current a{background: #10549c; color: #fff;}
+    .servicios .opciones ul li a:hover{background: #10549c; color: #fff;}
+    
 
 
 
     /* Style */
 
-    .servicios{min-height: 200px;padding: 40px 0;text-align: center;}
-    .portafolio{min-height: 200px;padding: 60px 0;text-align: center;}
-    .clientes{min-height: 200px;padding: 60px 0;text-align: center;}
+    .portafolio{min-height: 200px;padding: 60px 0;}
+    .clientes{min-height: 200px;padding: 60px 0;}
     .clientes ul{margin: 0;padding: 0;}
     .clientes ul li{margin: 20px 1%; width: 15%;float: left;}
     .clientes ul li:first-child{margin-left:0;}
     .clientes ul li:last-child{margin-right: 0;}
-    .equipo{min-height: 200px;padding: 40px 0;text-align: center;}
-    .piepag{min-height: 200px;padding: 30px 0;text-align: center;}
-    .derechos{min-height: 50px;padding: 60px 0;text-align: center;}
-    .serv{min-height: 200px;padding: 40px 0;text-align: center;}
-    .paquetes{min-height: 200px;padding: 40px 0;text-align: center;}
-    .comienza{min-height: 50px;padding: 60px 0;text-align: center;}
-    .equipo{min-height: 200px;padding: 40px 0;text-align: center;}
-    .mv{min-height: 200px;padding: 40px 0;text-align: center;}
-    .acerca{min-height: 200px;padding: 40px 0;text-align: center;}
-    .acerca-equipo{min-height: 200px;padding: 40px 0;text-align: center;}
-    .portafolios{min-height: 200px;padding: 40px 0;text-align: center;}
+    .equipo{min-height: 200px;padding: 40px 0;}
+    .piepag{min-height: 200px;padding: 30px 0;}
+    .derechos{min-height: 50px;padding: 60px 0;}
+    .serv{min-height: 200px;padding: 40px 0;}
+    .paquetes{min-height: 200px;padding: 40px 0;}
+    .comienza{min-height: 50px;padding: 60px 0;}
+    .equipo{min-height: 200px;padding: 40px 0;}
+    .mv{min-height: 200px;padding: 40px 0;}
+    .acerca{min-height: 200px;padding: 40px 0;}
+    .acerca-equipo{min-height: 200px;padding: 40px 0;}
+    .portafolios{min-height: 200px;padding: 40px 0;}
     .frase{background: #f2f2f2;}
     .frase .frase{text-align: center; font-size: 1.5em}
   
@@ -145,6 +155,36 @@
     		comment brackets */
     
     @font-face {
+        font-family: 'avenirLight';
+        src: url('fonts/avenir/AvenirLTStd-Light.eot');
+        src: url('fonts/avenir/AvenirLTStd-Light.eot?#iefix') format('embedded-opentype'),
+             url('fonts/avenir/AvenirLTStd-Light.woff') format('woff'),
+             url('fonts/avenir/AvenirLTStd-Light.ttf') format('truetype'),
+             url('fonts/avenir/AvenirLTStd-Light.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+   @font-face {
+        font-family: 'avenirMedium';
+        src: url('fonts/avenir/AvenirLTStd-Medium.eot');
+        src: url('fonts/avenir/AvenirLTStd-Medium.eot?#iefix') format('embedded-opentype'),
+             url('fonts/avenir/AvenirLTStd-Medium.woff') format('woff'),
+             url('fonts/avenir/AvenirLTStd-Medium.ttf') format('truetype'),
+             url('fonts/avenir/AvenirLTStd-Medium.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'avenirBook';
+        src: url('fonts/avenir/AvenirLTStd-Book.eot');
+        src: url('fonts/avenir/AvenirLTStd-Book.eot?#iefix') format('embedded-opentype'),
+             url('fonts/avenir/AvenirLTStd-Book.woff') format('woff'),
+             url('fonts/avenir/AvenirLTStd-Book.ttf') format('truetype'),
+             url('fonts/avenir/AvenirLTStd-Book.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
         font-family: 'avenirHeavy';
         src: url('fonts/avenir/AvenirLTStd-Heavy.eot');
         src: url('fonts/avenir/AvenirLTStd-Heavy.eot?#iefix') format('embedded-opentype'),
@@ -155,16 +195,15 @@
         font-style: normal;
     }
     @font-face {
-        font-family: 'bebas';
-        src: url('fonts/bebas/BEBAS-webfont.eot');
-        src: url('fonts/bebas/BEBAS-webfont.eot?#iefix') format('embedded-opentype'),
-             url('fonts/bebas/BEBAS-webfont.woff') format('woff'),
-             url('fonts/bebas/BEBAS-webfont.ttf') format('truetype'),
-             url('fonts/bebas/BEBAS-webfont.svg') format('svg');
+        font-family: 'avenirBlack';
+        src: url('fonts/avenir/AvenirLTStd-Black.eot');
+        src: url('fonts/avenir/AvenirLTStd-Black.eot?#iefix') format('embedded-opentype'),
+             url('fonts/avenir/AvenirLTStd-Black.woff') format('woff'),
+             url('fonts/avenir/AvenirLTStd-Black.ttf') format('truetype'),
+             url('fonts/avenir/AvenirLTStd-Black.svg') format('svg');
         font-weight: normal;
         font-style: normal;
     }
-
     @font-face {
         font-family: 'custom';
         src:url('fonts/custom/icomoon.eot?-f1ilph');
