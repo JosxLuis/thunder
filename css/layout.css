@@ -83,6 +83,10 @@
     .portafolio .proyecto a:hover{ background-color: #10549c !important;  transition: background-color .3s; }
     .portafolio .proyecto a:hover .nombre{visibility: visible; opacity: 1;}
 
+    .portafolio{width: 100%;  min-height: 55px; }
+    .portafolio h3{text-align: center; padding: 10px 0 30px 0; color: #363b40; font-family: 'avenirMedium'; font-size: 3em; }
+    .portafolio .paginacion{width: 100%; min-height: 70px;}
+    .portafolio .paginacion h6{text-align: center; padding:25px; color: #242b31;  font-family: 'avenirBook'; font-size: 2.5em; line-height: 1.6em;}
 
     .clientes{min-height: 200px;padding: 50px 0; background: #242b31;}
     .clientes h3{text-align: center; color: #FFF;}
@@ -92,18 +96,56 @@
     .clientes ul li:last-child{margin-right: 0;}
     .clientes ul li .cliente{display: block; width: 100%; height: 40px; background-size:contain !important; background-position: center center !important; background-repeat: no-repeat !important; }
 
-    .equipo{width: 100%; min-height: 200px; padding: 50px 0; background: #1e88e5;}
-    .equipo .icono{width: 100%; min-height: 100px; font-size: 32em; color: #FFF; text-align: center; }
-    .equipo .razon{width: 80%; margin: 0 auto;}
-    .equipo .razon h3{ color: #FFF; margin-top: 50px;}
-    .equipo .razon p{ color: #FFF; font-family: 'avenirMedium'; font-size: 1.5em; text-align: justify; }
+    .historia{width: 100%; min-height: 200px; padding: 50px 0; background: #1e88e5;}
+    .historia .icono{width: 100%; min-height: 100px; font-size: 32em; color: #FFF; text-align: center; }
+    .historia .razon{width: 80%; margin: 0 auto;}
+    .historia .razon h3{ color: #FFF; margin-top: 50px;}
+    .historia .razon p{ color: #FFF; font-family: 'avenirMedium'; font-size: 1.5em; text-align: justify; }
 
-    footer{width: 100%; min-height: 300px; padding: 20px 0 0 0;}
+    .wrapper .descripcion{width: 100%; min-height: 350px; background: #10549e;}
+    .wrapper .descripcion  h4{font-size: 2.3em; font-family: 'avenirHeavy'; color: #fff; text-align: left; margin-top: 110px;}
+    .wrapper .descripcion  p{font-size: 1.8em; font-family: 'avenirMedium'; color: #fff; text-align: justify;}
+    .wrapper .descripcion .imagen {width: 92%; height: 350px; background: url(../img/despegue.svg); background-size: cover !important; background-position: top center; }
+
+
+    .wrapper .motivacion {min-height: 200px;padding: 50px 0; background: #fff;}
+    .wrapper .motivacion .icono {width: 150px;height: 150px; margin: 0 auto; text-align: center; }
+    .wrapper .motivacion .icono i{font-size: 10em; line-height: 1.5em; color: red;}
+    .wrapper .motivacion h3{text-align: center; color: #363b40; font-family: 'avenirBook';}
+    .wrapper .motivacion p{text-align: center; color: #616366; font-family: 'avenirBook'; font-size: 1.6em; line-height: 1.4em;}
+    .wrapper .motivacion  .razones{width: 100%; min-height: 100px; margin: 0 auto; padding: 50px 0; }
+    .wrapper .motivacion  .razones .desc{width: 100%; height: 100px; float: left; }
+    .wrapper .motivacion  .razones .desc h4{font-size: 2em; margin: 0; color: #363b40; font-family: 'avenirBook'; }
+    .wrapper .motivacion  .razones .desc p{font-size: 1.4em; color: #616366; text-align: justify; font-family: 'avenirBook'; }
+
+    .wrapper .equipo {width: 100%;  min-height: 200px; padding: 70px 0 50px 0; background: #f2f2f2;}
+    .wrapper .equipo h3{text-align: center; color: #363b40; font-family: 'avenirBook';}
+    .wrapper .equipo p{text-align: center; color: #616366; font-family: 'avenirBook'; font-size: 1.6em; line-height: 1.4em;}
+    .wrapper .equipo .integrante{width: 100%; min-height: 300px;}
+    .wrapper .equipo .integrante .foto{width: 182px; height: 182px; background: #fff; border-radius: 96px; margin: 0 auto 15px auto;}
+    .wrapper .equipo .integrante .foto a{display: block; width: 100%; height: 100%; border-radius: 50%; background-color: #fff !important;  background-size: cover !important; background-position: center}
+    .wrapper .equipo .integrante h5{font-size: 2em; text-align: center; font-family: 'avenirBook'; color: #363b40;}
+    .wrapper .equipo .integrante span{display: block; width: 100%; font-family: 'avenirBook'; text-align: center; font-size: 1.6em; color: #616366;}
+
+    .wrapper .descripcion{width: 100%; min-height: 350px; background: #10549e;}
+    .wrapper .descripcion h4{font-size: 2.3em; font-family: 'avenirHeavy'; color: #fff; text-align: left; margin-top: 110px;}
+    .wrapper .descripcion p{font-size: 1.8em; font-family: 'avenirMedium'; color: #fff; text-align: justify;}
+    .wrapper .descripcion .imagen{width: 92%; height: 350px; background: url(../img/despegue.svg); background-size: cover !important; background-position: top center;}
+
+    .wrapper .tecnologias h3{text-align: center; color: #1e88e5;}
+    .wrapper .tecnologias p{text-align: center; color: #e6e6e6; font-family: 'avenirBook'; font-size: 1.6em; line-height: 1.4em;}
+    .wrapper .tecnologias li{text-align: center;}
+    .wrapper .tecnologias ul li a{text-decoration: none; color: #fff;}
+    .wrapper .tecnologias ul li i {font-size: 5.9em;}
+
+    footer {width: 100%; min-height: 300px; padding: 20px 0 0 0;}
     footer .piepag{border-bottom: 1px solid #e6e6e6;}
     footer .piepag h4{font-size: 2.5em; font-family: 'avenirBook'; color: #363b40; margin-bottom: 15px;}
     footer .piepag ul li{ width: 100%; min-height: 25px;}
     footer .piepag ul li a{text-decoration: none; font-family: 'avenirBook'; color: #616366; font-size: 1.5em; }
-    
+    footer .piepag ul li a:hover{color: #1e88e5;}
+   
+
     footer .derechos{width: 100%; height: 70px;}
     footer .derechos .derecho p,footer .derechos .version p{font-size: 1.5em; font-family: 'avenirBook'; color: #616366; line-height: 1.3em; margin:0; padding: 0;}
     footer .derechos .version p{text-align: right; margin: 0;}
@@ -141,9 +183,6 @@
 
     /* Bigger than 1280px */
 
-    @media only screen and (min-width: 1281px) {
-    
-    }
 
 
     @media only screen and (min-width: 1600px) {
@@ -160,10 +199,10 @@
 
 
 
-            /* Tablet Portrait size to standard 960 (devices and browsers) */
+    /* Tablet Portrait size to standard 960 (devices and browsers) */
     @media only screen and (min-width: 768px) and (max-width: 959px) {
 
-  
+    .about .equipo .integrante .foto{width: 142px; height: 142px;}
 
     }
 
@@ -280,6 +319,29 @@
     }
 
 
+    .icon-arduino .path1:before {
+      content: "\e908";
+      color: rgb(0, 0, 0);
+    }
+    .icon-arduino .path2:before {
+      content: "\e909";
+      margin-left: -1em;
+      color: rgb(255, 255, 255);
+    }
+    .icon-arduino .path3:before {
+      content: "\e90a";
+      margin-left: -1em;
+      color: rgb(255, 255, 255);
+    }
+    .icon-amazon:before {
+      content: "\e90b";
+    }
+    .icon-xamarin:before {
+      content: "\e90c";
+    }
+    .icon-texas:before {
+      content: "\e90d";
+    }
     .icon-equipo:before {
       content: "\e907";
     }
