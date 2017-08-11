@@ -21,71 +21,30 @@
         height: 100%;
         font-family: arial; 
         font-size: 62.5%;
-        background: #f2f2f2;
     }
     
+    /* #Page Styles
+    ================================================== */
+    /* Globales */
+    .banner{width: 100%; min-height: 60px;background: #E6E6E6;text-align: center;}
+    .he100{height: 100px; line-height: 100px;}
+    .he200{height: 200px;line-height: 200px;}
+    .he300{height: 300px;line-height: 300px;}
+    .banner p{font-family: helvetica;color:#333; font-size: 1.6em; display: inline-block;vertical-align: middle;line-height: normal; text-align: center;}
+    .titulo{height: 60px;background: #E6E6E6;}
+    .w100{width: 100px;}
+    .w200{width: 200px;}
+    .w300{width: 300px;}
+    .w1{width: 100%;display: block;}
+    .w2{width: 50%;display: block;}
+    .w3{width: 25%;display: block;}
+    .maut{margin: 0 auto;}
+    .texto{height: 20px;background: #E6E6E6; margin-bottom: 10px;}
+    .he400{height: 400px;line-height: 400px;}
 
-    /*Tipografias*/
-
-    h1,h2,h3,h4,h5,h6{font-family: 'avenirMedium';color: #363b40; }
-    h1{font-size: 3.6em; }
-    h2{font-size: 3.2em;}
-    h3{font-size: 2.7em;}
-    h4{font-size: 2.2em;}
-    h5{font-size: 1.8em;}
-    h6{font-size: 1.4em;}
-    h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{ color:#616366; line-height: 1em;}
-    p{font-family: 'avenirMedium'; font-size: 1.5em; color: #616366;}
-
-    /*Globales*/
-
-    .section   {width: 100%; min-height: 60px;}
-    .sec-blue  {background-color: #1e88e5;}
-    .sec-white {background-color: #fff;}
-    .sec-gray  {background-color: #242b31;}
-    .mh-100     {min-height: 100px;}
-    .mh-200     {min-height: 200px;}
-    .mh-300     {min-height: 300px;}
-    .mh-400     {min-height: 400px;}
-    .mh-500     {min-height: 500px;}
-    .mh-600     {min-height: 600px;}
-    .mh-700     {min-height: 700px;}
-    .mh-800     {min-height: 800px;}
-    .mh-900     {min-height: 900px;}
-    .mh-1000    {min-height:1000px;}
-    .pd-10      {padding: 10px 0;}
-    .pd-20      {padding: 20px 0;}
-    .pd-30      {padding: 30px 0;}
-    .pd-40      {padding: 40px 0;}
-    .pd-50      {padding: 50px 0;}
-    .pd-60      {padding: 60px 0;}
-    .pd-70      {padding: 70px 0;}
-    .pd-80      {padding: 80px 0;}
-    .pd-90      {padding: 90px 0;}
-    .pd-100     {padding:100px 0;}
-    .box       {width: 100%;}
-    .pd-all-5  {width: 90%; height: 90%; padding: 5%;}
-    .pd-all-10 {width: 80%; height: 80%; padding:10%;}
-    .pd-all-20 {width: 60%; height: 60%; padding:20%;}
-    .pd-all-25 {width: 50%; height: 50%; padding:25%;}
-    .pd-all-30 {width: 40%; height: 40%; padding:30%;}
-    .pd-ver-10 {width: 100%;height: 80%; padding:10% 0;}
-    .pd-ver-20 {width: 100%;height: 60%; padding:20% 0;}
-    .pd-ver-25 {width: 100%;height: 50%; padding:25% 0;}
-    .pd-ver-30 {width: 100%;height: 40%; padding:30% 0;}
-    .pd-hor-10 {width: 80%; padding:0 10%;}
-    .pd-hor-20 {width: 60%; padding:0 20%;}
-    .pd-hor-25 {width: 50%; padding:0 25%;}
-    .pd-hor-30 {width: 40%; padding:0 30%;}
-    .tx-rig{ text-align: right; }
-    .tx-cen{ text-align: center; }
-    .tx-jus{ text-align: justify; }
-    .col-blue{color: #1e88e5;}
-    .col-white{color: #ffffff;}
-    .col-gray{color: #242b31;}
-    .col-yellow{color: #f1cc0e;}
-
-     
+    body{background: #f2f2f2;}
+    h1,h2,h3,h4,h5,h6{font-family: 'avenirMedium'; margin: 0; }
+    p{font-family: 'avenirMedium';}
     header{background: #fff; height: 80px; width: 100%;}
     header .logo{width: 200px; height: 56px; margin: 7px auto 0 auto; }
     header .logo a{ display: block; width: 100%; height: 100%;  background: url(../img/logo.svg); background-size: cover;}
@@ -110,42 +69,9 @@
 
     .servicios .servicio{width: 80%; min-height: 100px; margin: 0 auto; padding: 50px 10%; }
     .servicios .servicio .icono{width: 30%; height: 100px; float: left;  font-size: 7.5em; line-height: 1.4em; color: #1e88e5; text-align: center;}
-    .servicios .servicio .desc{width: 65%; height: 100px; float: left; margin-left: 5%;}
-    .servicios .servicio .desc h4{font-size: 2em; margin: 0; color: #363b40;}
-    .servicios .servicio .desc p{font-size: 1.4em; color: #616366;}
-    .servicios .ver-mas{width: 240px;height: 50px;}
-    .servicios .ver-mas a{display: block;width: 100%; height: 100%; background: #1e88e5; color: #fff; font-size: 1.5em; font-family: 'avenirHeavy';text-align: center; text-decoration: none;line-height: 3.5em; border-radius: 5px;}
-    .servicios .ver-mas a:hover{background: white;  border:1px solid #1e88e5; color: #1e88e5;}
-
-    .service{min-height: 200px; padding: 30px 0 40px 0; background: #FFF;}
-    .service .opciones{width: 100%;  height: 55px; border-bottom: 1px solid #e6e6e6;}
-    .service .opciones h3{float: left; line-height: 2em; }
-    .service .opciones ul{width: 300px; height: 55px;}
-    .service .opciones ul li{width: 50%; float: left; height: 55px;}
-    .service .opciones ul li a{display: block; width: 100%; height: 100%; background: #e6e6e6; text-align: center; text-decoration: none; color: #666; font-family: 'avenirHeavy'; font-size: 1.6em; line-height: 3.5em;}
-    .service .opciones ul li.current a{background: #1e88e5; color: #fff;}
-    .service .opciones ul li a:hover{background: #1e88e5; color: #fff;}
-
-    .service .servicio{width: 80%; min-height: 100px; margin: 0 auto; padding: 50px 10%; }
-    .service .servicio .icono{width: 30%; height: 100px; float: left;  font-size: 7.5em; line-height: 1.4em; color: #1e88e5; text-align: center;}
-    .service .servicio .desc{width: 65%; height: 100px; float: left; margin-left: 5%;}
-    .service .servicio .desc h4{font-size: 2em; margin: 0; color: #363b40;}
-    .service .servicio .desc p{font-size: 1.4em; color: #616366;}
-    .service .ver-mas{width: 240px;height: 50px;}
-    .service .ver-mas a{display: block;width: 100%; height: 100%; background: #1e88e5; color: #fff; font-size: 1.5em; font-family: 'avenirHeavy';text-align: center; text-decoration: none;line-height: 3.5em; border-radius: 5px;}
-    .service .ver-mas a:hover{background: white;  border:1px solid #1e88e5; color: #1e88e5;}
-
-    .planes{min-height: 200px;padding: 50px 0;}
-    .planes h3{text-align: center; color: black; font-family:'avenirHeavy';}
-    .planes p{text-align: center; color: black; font-family: 'avenirBook'; font-size: 1.6em; line-height: 1.4em;}
-
-    .plan{width: 100%; padding: 40px 0; border:1px solid #e6e6e6; background: #f2f2f2;text-align:center;  border-radius: 5px;}
-    .plan .categoria h3{ font-family: 'avenirHeavy'; }
-    .plan .precio{margin-top: 20px;}
-    .plan .precio p b{ font-family: 'avenirHeavy'; color: #1e88e5; min-height:35px; font-size: 2.3em; }
-    .plan p{ font-family: 'avenirMedium'; margin-top: 1em;}
-    .plan .incluye h4{ font-family: 'avenirMedium'; color: #10549e; font-size: 2.2em; text-align: left; margin-left: 1.4em; margin-top: .5em}
-    .plan h3{font-size: 1.6em;}
+    .servicios .servicio .descripcion{width: 65%; height: 100px; float: left; margin-left: 5%;}
+    .servicios .servicio .descripcion h4{font-size: 2em; margin: 0; color: #363b40;}
+    .servicios .servicio .descripcion p{font-size: 1.4em; color: #616366;}
 
     .portafolio{ min-height: 200px;padding: 60px 0;}
     .portafolio .proyecto{ width: 100%; height: 200px; background: #10549e; }
@@ -235,12 +161,6 @@
 
     /* Style */
 
-    .listas{width: 100%; height: 80px; background: #10549e ;}
-    .listas ul{width: 100%; height: 100px; text-align: center; padding: 2em;}
-    .listas ul li{width: 10%; height: 40px;float: left; margin-right: 40px;background: #10549e; }
-    .listas ul li a{;text-decoration: none; color: #fff;font-size: 2em;;font-family: 'avenirMedium';}
-    /* Style */
-
     
 
     
@@ -257,34 +177,12 @@
     .portafolios{min-height: 200px;padding: 40px 0;}
     .frase{background: #f2f2f2;}
     .frase .frase{text-align: center; font-size: 1.5em}
-
-    /* Maquetado */
-
-    .banner{width: 100%; min-height: 60px;background: #E6E6E6;text-align: center;}
-    .he100{height: 100px; line-height: 100px;}
-    .he200{height: 200px;line-height: 200px;}
-    .he300{height: 300px;line-height: 300px;}
-    .banner p{font-family: helvetica;color:#333; font-size: 1.6em; display: inline-block;vertical-align: middle;line-height: normal; text-align: center;}
-    .titulo{height: 60px;background: #E6E6E6;}
-    .w100{width: 100px;}
-    .w200{width: 200px;}
-    .w300{width: 300px;}
-    .w1{width: 100%;display: block;}
-    .w2{width: 50%;display: block;}
-    .w3{width: 25%;display: block;}
-    .maut{margin: 0 auto;}
-    .texto{height: 20px;background: #E6E6E6; margin-bottom: 10px;}
-    .he400{height: 400px;line-height: 400px;}
-    .he50{height: 50px;line-height: 50px;}
-
-     /* #Media Queries
+  
+    /* #Media Queries
     ================================================== */
 
     /* Bigger than 1280px */
 
-    @media only screen and (min-width: 1281px) {
-    
-    }
 
 
     @media only screen and (min-width: 1600px) {
@@ -301,10 +199,10 @@
 
 
 
-            /* Tablet Portrait size to standard 960 (devices and browsers) */
+    /* Tablet Portrait size to standard 960 (devices and browsers) */
     @media only screen and (min-width: 768px) and (max-width: 959px) {
 
-  
+    .about .equipo .integrante .foto{width: 142px; height: 142px;}
 
     }
 
