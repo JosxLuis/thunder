@@ -27,15 +27,17 @@
 
     /*Tipografias*/
 
-    h1,h2,h3,h4,h5,h6{font-family: 'avenirMedium';color: #363b40; }
-    h1{font-size: 3.6em; }
-    h2{font-size: 3.2em;}
-    h3{font-size: 2.7em;}
-    h4{font-size: 2.2em;}
-    h5{font-size: 1.8em;}
-    h6{font-size: 1.4em;}
-    h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{ color:#616366; line-height: 1em;}
+    h1,h2,h3,h4,h5,h6{font-family: 'avenirMedium';color: #363b40; line-height: 1em; }
+    h1{font-size: 3.6em; margin-bottom: 15px; }
+    h2{font-size: 3.2em; margin-bottom: 13px;}
+    h3{font-size: 2.7em; margin-bottom: 10px;}
+    h4{font-size: 2.2em; margin-bottom: 8px;}
+    h5{font-size: 1.8em; margin-bottom: 5px;}
+    h6{font-size: 1.4em; margin-bottom: 3px;}
+    h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{ color:#616366; line-height: 1em; font-size: 80%;}
     p{font-family: 'avenirMedium'; font-size: 1.5em; color: #616366;}
+    p small{font-size: 90%;}
+    blockquote{font-family: 'avenirBook'; border-left: 2px solid #ccc; }
 
     /*Globales*/
 
@@ -84,6 +86,13 @@
     .col-white{color: #ffffff;}
     .col-gray{color: #242b31;}
     .col-yellow{color: #f1cc0e;}
+    .btn{text-decoration: none; color: #ccc; border-radius: 5px;}
+    .btn-default{background:#ccc; color: #333; }
+    .btn-primary{background: #1e88e5; color: #FFF;}
+    .btn-block{display: block; width: 100%;}
+    .btn-small{padding: 5px 8px;}
+    .btn-medium{ padding: 10px 15px; }
+    .btn-big{ padding: 20px 30px; }
 
      
     header{background: #fff; height: 80px; width: 100%;}
