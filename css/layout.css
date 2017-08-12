@@ -38,6 +38,7 @@
     p{font-family: 'avenirMedium'; font-size: 1.5em; color: #616366;}
     p small{font-size: 90%;}
     blockquote{font-family: 'avenirBook'; border-left: 2px solid #ccc; }
+    button{display: block;}
 
     /*Globales*/
 
@@ -71,10 +72,12 @@
     .pd-all-20 {width: 60%; height: 60%; padding:20%;}
     .pd-all-25 {width: 50%; height: 50%; padding:25%;}
     .pd-all-30 {width: 40%; height: 40%; padding:30%;}
+    .pd-ver-5 {width: 100%;height: 90%; padding:5% 0;}
     .pd-ver-10 {width: 100%;height: 80%; padding:10% 0;}
     .pd-ver-20 {width: 100%;height: 60%; padding:20% 0;}
     .pd-ver-25 {width: 100%;height: 50%; padding:25% 0;}
     .pd-ver-30 {width: 100%;height: 40%; padding:30% 0;}
+    .pd-hor-5 {width: 90%; padding:0 5%;}
     .pd-hor-10 {width: 80%; padding:0 10%;}
     .pd-hor-20 {width: 60%; padding:0 20%;}
     .pd-hor-25 {width: 50%; padding:0 25%;}
@@ -86,13 +89,16 @@
     .col-white{color: #ffffff;}
     .col-gray{color: #242b31;}
     .col-yellow{color: #f1cc0e;}
+    .clear{clear: both;}
 
-    a.btn{text-decoration: none; text-align: center; display: inline-block; line-height: 3em;}
-    .btn{border:1px solid transparent; box-shadow: none; color: #616366; border-radius: 5px;  font-family: 'avenirMedium'; padding: 0; vertical-align: top; cursor: pointer;}
-    .btn-block{display: block; width: 100%;}
+    a.btn{text-decoration: none; text-align: center; display: block; line-height: 3em;}
+    a.btn-inli,
+    .btn-inli{display: inline-block; }
+    .btn{border:1px solid transparent;  box-shadow: none; color: #616366; border-radius: 5px;  font-family: 'avenirMedium'; padding: 0; cursor: pointer;}
     .btn-small{width: 100px; height: 30px; font-size: 1em;}
     .btn-medium{width: 150px; height: 40px; font-size: 1.3em;}
     .btn-big{ width: 220px; height: 55px;font-size: 1.8em; }
+    .btn-block{display: block; width: 100%;}
     .btn-default,.btn-white,.btn-blue,.btn-gray,.btn-default-out,.btn-blue-out,.btn-white-out,.btn-gray-out{transition:background .3s,color .3s, border .3s;}
     .btn-default{background:#ccc; color: #333;}
     .btn-default:hover{background: #aaaaaa;}
@@ -111,6 +117,9 @@
     .btn-gray-out{background: none; color: #242b31; border:1px solid #242b31;}
     .btn-gray-out:hover{background: #242b31; color: #fff;}
     .btn-nrad{border-radius: 0;}
+    .btn-left{float: left;}
+    .btn-center{margin:0 auto;}
+    .btn-right{float: right;}
     
      
     header{background: #fff; height: 80px; width: 100%;}
