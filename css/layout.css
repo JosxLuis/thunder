@@ -86,14 +86,32 @@
     .col-white{color: #ffffff;}
     .col-gray{color: #242b31;}
     .col-yellow{color: #f1cc0e;}
-    .btn{text-decoration: none; color: #ccc; border-radius: 5px;}
-    .btn-default{background:#ccc; color: #333; }
-    .btn-primary{background: #1e88e5; color: #FFF;}
-    .btn-block{display: block; width: 100%;}
-    .btn-small{padding: 5px 8px;}
-    .btn-medium{ padding: 10px 15px; }
-    .btn-big{ padding: 20px 30px; }
 
+    a.btn{text-decoration: none; text-align: center; display: inline-block; line-height: 3em;}
+    .btn{border:1px solid transparent; box-shadow: none; color: #616366; border-radius: 5px;  font-family: 'avenirMedium'; padding: 0; vertical-align: top; cursor: pointer;}
+    .btn-block{display: block; width: 100%;}
+    .btn-small{width: 100px; height: 30px; font-size: 1em;}
+    .btn-medium{width: 150px; height: 40px; font-size: 1.3em;}
+    .btn-big{ width: 220px; height: 55px;font-size: 1.8em; }
+    .btn-default,.btn-white,.btn-blue,.btn-gray,.btn-default-out,.btn-blue-out,.btn-white-out,.btn-gray-out{transition:background .3s,color .3s, border .3s;}
+    .btn-default{background:#ccc; color: #333;}
+    .btn-default:hover{background: #aaaaaa;}
+    .btn-default-out{background: none; color: #aaa; border:1px solid #ccc;}
+    .btn-default-out:hover{background: rgba(204,204,204,.6); color: #333;}
+    .btn-white{background: #FFFFFF; color: #000;}
+    .btn-white:hover{background: none; color: #fff; border:1px solid #fff;}
+    .btn-white-out{background: none; color: #fff; border:1px solid #fff;}
+    .btn-white-out:hover{background: rgba(255,255,255,.6); color: #333;}
+    .btn-blue{background: #1e88e5; color: #ffffff;}
+    .btn-blue:hover{background: #1663A7;}
+    .btn-blue-out{background: none; color: #1e88e5; border:1px solid #1e88e5;}
+    .btn-blue-out:hover{background: #1e88e5; color: #fff;}
+    .btn-gray{background: #242b31; color: #ffffff;}
+    .btn-gray:hover{background: #4b5156;}
+    .btn-gray-out{background: none; color: #242b31; border:1px solid #242b31;}
+    .btn-gray-out:hover{background: #242b31; color: #fff;}
+    .btn-nrad{border-radius: 0;}
+    
      
     header{background: #fff; height: 80px; width: 100%;}
     header .logo{width: 200px; height: 56px; margin: 7px auto 0 auto; }
