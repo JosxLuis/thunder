@@ -66,6 +66,14 @@
     .pd-80      {padding: 80px 0;}
     .pd-90      {padding: 90px 0;}
     .pd-100     {padding:100px 0;}
+    .linh-1{line-height: 1em;}
+    .linh-3{line-height: 3em;}
+    .linh-2{line-height: 2em;}
+    .no-mar-bo{margin-bottom: 0;}
+    .no-mar-le{margin-left: 0;}
+    .no-mar-to{margin-top: 0;}
+    .no-mar-ri{margin-right: 0;}
+    .no-mar{margin:0;}
     .box       {width: 100%;}
     .pd-all-5  {width: 90%; height: 90%; padding: 5%;}
     .pd-all-10 {width: 80%; height: 80%; padding:10%;}
@@ -90,7 +98,8 @@
     .col-gray{color: #242b31;}
     .col-yellow{color: #f1cc0e;}
     .clear{clear: both;}
-
+    
+    /* Botones */
     a.btn{text-decoration: none; text-align: center; display: block; line-height: 3em;}
     a.btn-inli,
     .btn-inli{display: inline-block; }
@@ -120,6 +129,33 @@
     .btn-left{float: left;}
     .btn-center{margin:0 auto;}
     .btn-right{float: right;}
+
+    /* Tablas */
+    table.tab-normal{width: 100%;  border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-right:1px solid #ccc;} 
+    table.tab-normal thead tr th,table.tab-normal tbody tr td,table.tab-normal tfoot tr td{border-bottom: 1px solid #ccc;}
+    table.tab-normal thead tr th{font-family: 'avenirHeavy'; font-size: 1.4em; padding: 10px 0; color: #363b40;}
+    table.tab-normal tbody tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 10px 0; color: #616366; text-indent: 5px;}
+    table.tab-normal tfoot tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 10px 0; color: #616366; text-indent: 5px;}
+
+    table.tab-cnt-center td,table.tab-cnt-center th{text-align: center;}
+
+    table.tab-wide{width: 100%;  border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-right:1px solid #ccc;} 
+    table.tab-wide thead tr th,table.tab-wide tbody tr td,table.tab-wide tfoot tr td{border-bottom: 1px solid #ccc;}
+    table.tab-wide thead tr th{font-family: 'avenirHeavy'; font-size: 1.4em; padding: 25px 0; color: #363b40;}
+    table.tab-wide tbody tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 25px 0; color: #616366; text-indent: 5px;}
+    table.tab-wide tfoot tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 25px 0; color: #616366; text-indent: 5px;}
+
+    table.tab-border{width: 100%;  border-top: 1px solid #ccc; border-left: 1px solid #ccc;} 
+    table.tab-border thead tr th,table.tab-border tbody tr td,table.tab-border tfoot tr td{border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;}
+    table.tab-border thead tr th{font-family: 'avenirHeavy'; font-size: 1.4em; padding: 10px 0; color: #363b40;}
+    table.tab-border tbody tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 10px 0; color: #616366; text-indent: 5px;}
+    table.tab-border tfoot tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 10px 0; color: #616366; text-indent: 5px;}
+
+    table.tab-border-wide{width: 100%;  border-top: 1px solid #ccc; border-left: 1px solid #ccc; } 
+    table.tab-border-wide thead tr th,table.tab-border-wide tbody tr td,table.tab-border-wide tfoot tr td{border-bottom: 1px solid #ccc; border-right:1px solid #ccc;}
+    table.tab-border-wide thead tr th{font-family: 'avenirHeavy'; font-size: 1.4em; padding: 25px 0; color: #363b40;}
+    table.tab-border-wide tbody tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 25px 0; color: #616366; text-indent: 5px;}
+    table.tab-border-wide tfoot tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 25px 0; color: #616366; text-indent: 5px;}
     
      
     header{background: #fff; height: 80px; width: 100%;}
@@ -233,8 +269,8 @@
     .wrapper .equipo p{text-align: center; color: #616366; font-family: 'avenirBook'; font-size: 1.6em; line-height: 1.4em;}
     .wrapper .equipo .integrante{width: 100%; min-height: 300px;}
     .wrapper .equipo .integrante .foto{width: 182px; height: 182px; background: #fff; border-radius: 96px; margin: 0 auto 15px auto;}
-    .wrapper .equipo .integrante .foto a{display: block; width: 100%; height: 100%; border-radius: 50%; background-color: #fff !important;  background-size: cover !important; background-position: center; filter:grayscale(1);}
-    .wrapper .equipo .integrante .foto a:hover{filter: grayscale(0);}
+    .wrapper .equipo .integrante .foto a{display: block; width: 100%; height: 100%; border-radius: 50%; background-color: #fff !important;  background-size: cover !important; background-position: center; filter:grayscale(100%); -webkit-filter: grayscale(100%);}
+    .wrapper .equipo .integrante .foto a:hover{filter: grayscale(0%); -webkit-filter: grayscale(0%);}
     .wrapper .equipo .integrante h5{font-size: 2em; text-align: center; font-family: 'avenirBook'; color: #363b40;}
     .wrapper .equipo .integrante span{display: block; width: 100%; font-family: 'avenirBook'; text-align: center; font-size: 1.6em; color: #616366;}
 
@@ -248,6 +284,55 @@
     .wrapper .tecnologias li{text-align: center;}
     .wrapper .tecnologias ul li a{text-decoration: none; color: #fff;}
     .wrapper .tecnologias ul li i {font-size: 5.9em;}
+
+    /* blog */
+
+    .wrapper .blog{width: 100%; min-height: 1000px;  }
+    .wrapper .blog h3{font-size: 1.5em;font-family: 'avenirLight'; text-align: center; color: #fff; padding-top: 20px;}
+    .wrapper .blog .ventajas{width: 100%; min-height: 500px;/*background: red;*/}
+    .wrapper .blog .ventajas .ventaja{width: 100%; height: 350px; background: #3d9fff;}
+    .wrapper .blog .ventajas .ventaja h4{font-size: 3em; font-family: 'avenirHeavy'; color: #fff; text-align: center; padding-top: 35px; }
+    .wrapper .blog .noticias{width: 100%; min-height: 1000px;/*background: red;*/}
+    .wrapper .blog .noticias .noticia {width: 100%; min-height: 400px; background: white; margin-bottom: 20px;}
+    .wrapper .blog .noticias .noticia .imagen {width: 100%; height: 325px;  }
+    .wrapper .blog .noticias .noticia .imagen a{display: block; width: 100%; height: 100%;   background-size: cover !important; background-position: center}
+    .wrapper .blog .noticias .noticia .status {width: 100%; height: 18px; background: #fff; padding: 12px 0; border-bottom: 1px solid #E6E6E6; margin-bottom: 5px; }
+    .wrapper .blog .noticias .noticia .status .elementos{width: 94%; height: 20px; margin:0 auto; }
+    .wrapper .blog .noticias .noticia .status .elementos a{text-decoration: none; font-size: 1.3em; line-height: 1.5em; font-family: 'avenirHeavy'; color: #10549e; }
+    .wrapper .blog .noticias .noticia .status .elementos i{font-size: 1.3em; color: #363b40;}
+    .wrapper .blog .noticias .noticia .status .elementos i a{font-size: 1.2em; text-align: none; color: #363b40; margin-left: 5px;}
+    .wrapper .blog .noticias .noticia .status .elementos i a:hover{color: #10549e; }
+    .wrapper .blog .noticias .noticia .status .elementos span{font-size: 1.2em; text-align: none; color: #363b40; margin-left: 5px;}
+    .wrapper .blog .noticias .noticia .intro{width: 94%; margin: 0 auto;}
+    .wrapper .blog .noticias .noticia .intro a h2{font-size: 2em;font-family: 'avenirHeavy'; color: #363b40; text-align: left; margin: 0; padding: 0;}
+    .wrapper .blog .noticias .noticia .intro a h2:hover{color: #10549e;}
+    .wrapper .blog .noticias .noticia .intro a {text-decoration: none;}
+    .wrapper .blog .noticias .noticia .intro p{font-size: 1.6em; font-family: 'avenirBook'; text-align: justify; color: #616366;}
+    .wrapper .blog .noticias .noticia .autor {width: 100%; height: 60px; padding: 10px 0;}
+    .wrapper .blog .noticias .noticia .autor .foto{width: 60px; height: 60px; background: #fff; border-radius: 30px; margin: 0 20px;float: left; }
+    .wrapper .blog .noticias .noticia .autor .foto a{display: block; width: 100%; height: 100%; border-radius: 50%; background-color: #fff !important;  background-size: cover !important; background-position: center}
+    .wrapper .blog .noticias .noticia .autor .nombre {font-size: 1em; font-family: 'avenirMedium'; color: #616366;min-height: 40px;width: 50%;float: left; line-height: 1em; padding: 10px 0; }
+    .wrapper .blog .noticias .noticia .autor .nombre a {text-decoration: none; color: #363b40;}
+    .wrapper .blog .noticias .noticia .autor .nombre a:hover {color: #10549e;}
+    .wrapper .blog .noticias .noticia .autor .nombre a b{font-size: 1.3em; font-family: 'avenirHeavy'; line-height: 1.8em;}    
+    .wrapper .blog .noticias .noticia .autor .share {font-size: 1.4em;text-align: right; height: 20px;width: 30%;float: left;padding: 10px 0;line-height: 3em;}
+    .wrapper .blog .noticias .noticia .autor .share a{text-decoration: none; color: red;}
+    .wrapper .blog .noticias .noticia .autor .share i{}
+    .wrapper .blog .proyectos{width: 100%; min-height: 1000px;/*background: red;*/ background: #fff;}
+    .wrapper .blog .proyectos .proyecto{width: 100%; min-height: 20px; /*background: blue;*/}
+    .wrapper .blog .proyectos .proyecto .imagen {width: 85%; height: 140px;  margin-left: 22px;  }
+    .wrapper .blog .proyectos .proyecto .imagen a{display: block; width: 100%; height: 100%;  background-size: cover !important; background-position: center}
+    .wrapper .blog .proyectos .proyecto .intro{width: 85%; margin: 0 auto;}
+    .wrapper .blog .proyectos .proyecto .intro a h2{font-size: 1.5em;font-family: 'avenirHeavy'; color: #363b40; text-align: center; margin: 0; padding: 0;}
+    .wrapper .blog .proyectos .proyecto .intro a h2:hover{color: #10549e;}
+    .wrapper .blog .proyectos .proyecto .intro a {text-decoration: none;}
+    .wrapper .blog .proyectos .proyecto .status {width: 100%; height: 18px; padding: 12px 0; border-bottom: 1px solid #E6E6E6; margin-bottom: 5px; }
+    .wrapper .blog .proyectos .proyecto .status .elementos{width: 85%; height: 20px; margin:0 auto; }
+    .wrapper .blog .proyectos .proyecto .status .elementos a{text-decoration: none; font-size: 1.2em; line-height: 1.5em; font-family: 'avenirHeavy'; color: #10549e; }
+    .wrapper .blog .proyectos .proyecto .status .elementos i{font-size: 1.3em; color: #363b40;}
+    .wrapper .blog .proyectos .proyecto .status .elementos i a{font-size: 1.2em; text-align: none; color: #363b40; margin-left: 5px;}
+    .wrapper .blog .proyectos .proyecto .status .elementos i a:hover{color: #10549e; }
+    .wrapper .blog .proyectos .proyecto .status .elementos span{font-size: 1.2em; text-align: none; color: #363b40; margin-left: 5px;}
 
     footer {width: 100%; min-height: 300px; padding: 20px 0 0 0;}
     footer .piepag{border-bottom: 1px solid #e6e6e6;}
