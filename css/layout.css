@@ -233,7 +233,8 @@
     .wrapper .equipo p{text-align: center; color: #616366; font-family: 'avenirBook'; font-size: 1.6em; line-height: 1.4em;}
     .wrapper .equipo .integrante{width: 100%; min-height: 300px;}
     .wrapper .equipo .integrante .foto{width: 182px; height: 182px; background: #fff; border-radius: 96px; margin: 0 auto 15px auto;}
-    .wrapper .equipo .integrante .foto a{display: block; width: 100%; height: 100%; border-radius: 50%; background-color: #fff !important;  background-size: cover !important; background-position: center}
+    .wrapper .equipo .integrante .foto a{display: block; width: 100%; height: 100%; border-radius: 50%; background-color: #fff !important;  background-size: cover !important; background-position: center; filter:grayscale(1);}
+    .wrapper .equipo .integrante .foto a:hover{filter: grayscale(0);}
     .wrapper .equipo .integrante h5{font-size: 2em; text-align: center; font-family: 'avenirBook'; color: #363b40;}
     .wrapper .equipo .integrante span{display: block; width: 100%; font-family: 'avenirBook'; text-align: center; font-size: 1.6em; color: #616366;}
 
