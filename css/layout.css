@@ -56,6 +56,7 @@
     .mh-800     {min-height: 800px;}
     .mh-900     {min-height: 900px;}
     .mh-1000    {min-height:1000px;}
+    .mw-50{width: 50% !important;}
     .pd-10      {padding: 10px 0;}
     .pd-20      {padding: 20px 0;}
     .pd-30      {padding: 30px 0;}
@@ -66,30 +67,32 @@
     .pd-80      {padding: 80px 0;}
     .pd-90      {padding: 90px 0;}
     .pd-100     {padding:100px 0;}
-    .linh-1{line-height: 1em;}
-    .linh-3{line-height: 3em;}
-    .linh-2{line-height: 2em;}
     .no-mar-bo{margin-bottom: 0;}
     .no-mar-le{margin-left: 0;}
     .no-mar-to{margin-top: 0;}
     .no-mar-ri{margin-right: 0;}
     .no-mar{margin:0;}
     .box       {width: 100%;}
+    .box-half{width: 50%;}
     .pd-all-5  {width: 90%; height: 90%; padding: 5%;}
     .pd-all-10 {width: 80%; height: 80%; padding:10%;}
     .pd-all-20 {width: 60%; height: 60%; padding:20%;}
     .pd-all-25 {width: 50%; height: 50%; padding:25%;}
     .pd-all-30 {width: 40%; height: 40%; padding:30%;}
-    .pd-ver-5 {width: 100%;height: 90%; padding:5% 0;}
+    .pd-ver-5  { width: 100%;height: 90%; padding:5% 0;}
     .pd-ver-10 {width: 100%;height: 80%; padding:10% 0;}
     .pd-ver-20 {width: 100%;height: 60%; padding:20% 0;}
     .pd-ver-25 {width: 100%;height: 50%; padding:25% 0;}
     .pd-ver-30 {width: 100%;height: 40%; padding:30% 0;}
-    .pd-hor-5 {width: 90%; padding:0 5%;}
+    .pd-hor-5  { width: 90%; padding:0 5%;}
     .pd-hor-10 {width: 80%; padding:0 10%;}
     .pd-hor-20 {width: 60%; padding:0 20%;}
     .pd-hor-25 {width: 50%; padding:0 25%;}
     .pd-hor-30 {width: 40%; padding:0 30%;}
+    .pd-right-2{width: 98%;  padding-right: 2%;}
+    .pd-left-2{width: 98%;  padding-left: 2%;}
+    .pd-right-5{width: 95%;  padding-right: 5%;}
+    .pd-left-5{width: 95%;  padding-left: 5%;}
     .tx-rig{ text-align: right; }
     .tx-cen{ text-align: center; }
     .tx-jus{ text-align: justify; }
@@ -100,6 +103,17 @@
     .clear{clear: both;}
     .relative{position: relative;}
     .overh{overflow:hidden;}
+    .dis-blo{display: block;}
+    .f-left{float: left;}
+
+
+    /* alertas */
+    .alert{width: 92%; min-height: 10px; padding: 18px 4%; margin: 10px 0; font-size: 1.6em; line-height: 1em; font-family: 'avenirMedium'; border-radius: 5px; color: #FFF;}
+    .alert i{ font-size: 1.2em; }
+    .alert-success{background: #25ba9b; }
+    .alert-warning{background: #e1c71b; }
+    .alert-info{background: #3099da; }
+    .alert-error{background: #e65242; }
     
     /* Botones */
     a.btn{text-decoration: none; text-align: center; display: block; line-height: 3em;}
@@ -131,6 +145,21 @@
     .btn-left{float: left;}
     .btn-center{margin:0 auto;}
     .btn-right{float: right;}
+
+
+    /* formularios */
+    
+    input[type=text]{width: 100%; padding: 18px 20px 14px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: none; font-family: 'avenirMedium'; line-height: 1em; font-size: 1.6em; color: #999999; }
+    input[type=text]:focus{ box-shadow: none; border:1px solid #1e88e5; color: #616366; transition:border .2s;}
+    input[type=text]:disabled{ background: #e6e6e6; cursor: not-allowed;}
+    input[type=text]::-webkit-input-placeholder {  color: #999999; }
+    input[type=text]::-moz-placeholder { color: #999999; }
+    input[type=text]:-ms-input-placeholder { color: #999999;}
+    input[type=text]:-moz-placeholder { color: #999999; }
+    select{width: 100%; padding: 15px 0; height: 50px; background: none; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+    select:focus{ box-shadow: none; border:1px solid #1e88e5; color: #616366; transition:border .2s;}
+    
+
 
     /* Tablas */
     table.tab-normal{width: 100%;  border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-right:1px solid #ccc;} 
@@ -534,75 +563,92 @@
     }
 
 
-    .icon-arduino .path1:before {
-      content: "\e908";
-      color: rgb(0, 0, 0);
-    }
-    .icon-arduino .path2:before {
-      content: "\e909";
-      margin-left: -1em;
-      color: rgb(255, 255, 255);
-    }
-    .icon-arduino .path3:before {
-      content: "\e90a";
-      margin-left: -1em;
-      color: rgb(255, 255, 255);
-    }
-    .icon-amazon:before {
-      content: "\e90b";
-    }
-    .icon-xamarin:before {
-      content: "\e90c";
-    }
-    .icon-texas:before {
-      content: "\e90d";
-    }
-    .icon-equipo:before {
-      content: "\e907";
-    }
-    .icon-cms:before {
-      content: "\e900";
-    }
-    .icon-menu:before {
-      content: "\e901";
-    }
-    .icon-web-development:before {
-      content: "\e902";
-    }
-    .icon-ecommerce:before {
-      content: "\e903";
-    }
-    .icon-apps:before {
-      content: "\e904";
-    }
-    .icon-ui:before {
-      content: "\e905";
-    }
-    .icon-web-design:before {
-      content: "\e906";
-    }
-    .icon-chrome:before {
-      content: "\ead9";
-    }
-    .icon-firefox:before {
-      content: "\eada";
-    }
-    .icon-IE:before {
-      content: "\eadb";
-    }
-    .icon-edge:before {
-      content: "\eadc";
-    }
-    .icon-safari:before {
-      content: "\eadd";
-    }
-    .icon-opera:before {
-      content: "\eade";
-    }
-    .icon-html-five2:before {
-      content: "\eae5";
-    }
-    .icon-css3:before {
-      content: "\eae6";
-    }
-
+.icon-arduino .path1:before {
+  content: "\e908";
+  color: rgb(0, 0, 0);
+}
+.icon-arduino .path2:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-arduino .path3:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-amazon:before {
+  content: "\e90b";
+}
+.icon-xamarin:before {
+  content: "\e90c";
+}
+.icon-texas:before {
+  content: "\e90d";
+}
+.icon-equipo:before {
+  content: "\e907";
+}
+.icon-cms:before {
+  content: "\e900";
+}
+.icon-menu:before {
+  content: "\e901";
+}
+.icon-web-development:before {
+  content: "\e902";
+}
+.icon-ecommerce:before {
+  content: "\e903";
+}
+.icon-apps:before {
+  content: "\e904";
+}
+.icon-ui:before {
+  content: "\e905";
+}
+.icon-web-design:before {
+  content: "\e906";
+}
+.icon-error:before {
+  content: "\e5c9";
+}
+.icon-success:before {
+  content: "\e86c";
+}
+.icon-denied:before {
+  content: "\e15c";
+}
+.icon-warning:before {
+  content: "\e000";
+}
+.icon-help:before {
+  content: "\e887";
+}
+.icon-info:before {
+  content: "\e88e";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-firefox:before {
+  content: "\eada";
+}
+.icon-IE:before {
+  content: "\eadb";
+}
+.icon-edge:before {
+  content: "\eadc";
+}
+.icon-safari:before {
+  content: "\eadd";
+}
+.icon-opera:before {
+  content: "\eade";
+}
+.icon-html-five2:before {
+  content: "\eae5";
+}
+.icon-css3:before {
+  content: "\eae6";
+}
