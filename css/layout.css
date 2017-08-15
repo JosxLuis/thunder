@@ -149,15 +149,29 @@
 
     /* formularios */
     
-    input[type=text]{width: 100%; padding: 18px 20px 14px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: none; font-family: 'avenirMedium'; line-height: 1em; font-size: 1.6em; color: #999999; }
+    input[type=text]{width: 100%; padding: 18px 20px 14px 20px; margin: 0 0 10px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: none; font-family: 'avenirBook'; line-height: 1em; font-size: 1.6em; color: #999999; }
     input[type=text]:focus{ box-shadow: none; border:1px solid #1e88e5; color: #616366; transition:border .2s;}
     input[type=text]:disabled{ background: #e6e6e6; cursor: not-allowed;}
     input[type=text]::-webkit-input-placeholder {  color: #999999; }
     input[type=text]::-moz-placeholder { color: #999999; }
     input[type=text]:-ms-input-placeholder { color: #999999;}
     input[type=text]:-moz-placeholder { color: #999999; }
-    select{width: 100%; padding: 15px 0; height: 50px; background: none; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+    select{width: 100%; padding: 15px 0; height: 50px; padding: 18px 20px 14px 20px; background: none; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+            -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(../img/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 30px 50px;
+    cursor: pointer;
+    font-family: 'avenirMedium';
+    }
+
     select:focus{ box-shadow: none; border:1px solid #1e88e5; color: #616366; transition:border .2s;}
+    textarea{width: 100%; padding: 18px 20px 14px 20px; margin: 0 0 10px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: none; font-family: 'avenirMedium'; line-height: 1em; font-size: 1.6em; color: #999999;}
+    textarea:focus{box-shadow: none; border:1px solid #1e88e5; color: #616366; transition:border .2s;}
+    label{margin:0; padding: 0; font-family: 'avenirMedium'; font-size: 1.4em; color: #363b40;}
     
 
 
