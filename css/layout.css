@@ -1,29 +1,13 @@
-    /*
-    * Skeleton V1.2
-    * Copyright 2011, Dave Gamache
-    * www.getskeleton.com
-    * Free to use under the MIT license.
-    * http://www.opensource.org/licenses/mit-license.php
-    * 6/20/2012
-    */
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+    ol, ul { list-style: none; }
+    blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after,q:before, q:after { content: ''; content: none; }
+    table { border-collapse: collapse; border-spacing: 0; }
 
-    /* Table of Content
-    ==================================================
-    	#Site Styles
-    	#Page Styles
-    	#Media Queries
-    	#Font-Face */
-
-    /* #Site Styles
-    ================================================== */
-    html{height: 100%;}
-    body                          {
-        height: 100%;
-        font-family: arial; 
-        font-size: 62.5%;
-        background: #f2f2f2;
-    }
-    
+    html{ height: 100%; }
+    body{ height: 100%; font-family: arial;  font-size: 62.5%; background: #f2f2f2;  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-text-size-adjust: 100%;  }
 
     /*Tipografias*/
 
@@ -35,9 +19,11 @@
     h5{font-size: 1.8em; margin-bottom: 5px;}
     h6{font-size: 1.4em; margin-bottom: 3px;}
     h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{ color:#616366; line-height: 1em; font-size: 80%;}
-    p{font-family: 'avenirMedium'; font-size: 1.5em; color: #616366;}
+    p{font-family: 'avenirMedium'; font-size: 1.5em; color: #616366; line-height: 1.4em;}
     p small{font-size: 90%;}
-    blockquote{font-family: 'avenirBook'; border-left: 2px solid #ccc; }
+    p img { margin: 0; }
+    blockquote{font-family: 'avenirMedium'; border-left: 2px solid #ccc; color: #777; font-size: 1.6em; line-height: 1.6em; padding-left: 10px; font-style: italic; }
+    blockquote p { font-size: 1em; line-height: 1.6em; color: #777; font-style: italic; }
     button{display: block;}
 
     /*Globales*/
@@ -148,32 +134,23 @@
 
 
     /* formularios */
-    
-    input[type=text]{width: 100%; padding: 18px 20px 14px 20px; margin: 0 0 10px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: none; font-family: 'avenirBook'; line-height: 1em; font-size: 1.6em; color: #999999; }
+    form { margin-bottom: 20px; }
+    fieldset {margin-bottom: 20px; }
+    label,legend { display: block; font-weight: bold; font-size: 1.4em; }
+    input[type="checkbox"] { display: inline; }
+    input[type=text]{width: 100%; padding: 18px 20px 14px 20px; margin: 0 0 10px 0; outline: none; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: none; font-family: 'avenirMedium'; line-height: 1em; font-size: 1.6em; color: #999999; }
     input[type=text]:focus{ box-shadow: none; border:1px solid #1e88e5; color: #616366; transition:border .2s;}
     input[type=text]:disabled{ background: #e6e6e6; cursor: not-allowed;}
     input[type=text]::-webkit-input-placeholder {  color: #999999; }
     input[type=text]::-moz-placeholder { color: #999999; }
     input[type=text]:-ms-input-placeholder { color: #999999;}
     input[type=text]:-moz-placeholder { color: #999999; }
-    select{width: 100%; padding: 15px 0; height: 50px; padding: 18px 20px 14px 20px; background: none; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
-            -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-image: url(../img/arrow.png);
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-    background-size: 30px 50px;
-    cursor: pointer;
-    font-family: 'avenirMedium';
-    }
-
+    select{width: 100%; padding: 15px 0; outline: none; height: 50px; font-size: 1.4em; padding: 18px 20px 14px 20px; background: none; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; -webkit-appearance: none; -moz-appearance: none; 
+        appearance: none; background-image: url(../img/arrow.png); background-repeat: no-repeat; background-position: 100% 50%; background-size: 30px 50px; cursor: pointer; font-family: 'avenirMedium';}
     select:focus{ box-shadow: none; border:1px solid #1e88e5; color: #616366; transition:border .2s;}
-    textarea{width: 100%; padding: 18px 20px 14px 20px; margin: 0 0 10px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: none; font-family: 'avenirMedium'; line-height: 1em; font-size: 1.6em; color: #999999;}
+    textarea{width: 100%; outline: none; padding: 18px 20px 14px 20px; margin: 0 0 10px 0; display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: none; font-family: 'avenirMedium'; line-height: 1em; font-size: 1.6em; color: #999999;}
     textarea:focus{box-shadow: none; border:1px solid #1e88e5; color: #616366; transition:border .2s;}
-    label{margin:0; padding: 0; font-family: 'avenirMedium'; font-size: 1.4em; color: #363b40;}
-    
-
+    label{ display: block; font-family: 'avenirMedium'; font-size: 1.4em; color: #363b40; margin:5px 0;}
 
     /* Tablas */
     table.tab-normal{width: 100%;  border-top: 1px solid #ccc; border-left: 1px solid #ccc; border-right:1px solid #ccc;} 
@@ -201,6 +178,35 @@
     table.tab-border-wide thead tr th{font-family: 'avenirHeavy'; font-size: 1.4em; padding: 25px 0; color: #363b40;}
     table.tab-border-wide tbody tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 25px 0; color: #616366; text-indent: 5px;}
     table.tab-border-wide tfoot tr td{font-family: 'avenirMedium'; font-size: 1.4em; padding: 25px 0; color: #616366; text-indent: 5px;}
+
+    /* GENERALES */
+
+    /* #Links ================================================== */
+    a, a:visited { text-decoration: underline; outline: 0; }
+    p a, p a:visited { line-height: inherit; }
+
+
+    /* #Lists ================================================== */
+    ul, ol { margin-bottom: 20px; }
+    ul { list-style: none outside; }
+    ol { list-style: decimal; }
+    ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
+    ul.square { list-style: square outside; }
+    ul.circle { list-style: circle outside; }
+    ul.disc { list-style: disc outside; }
+    ul ul, ul ol,
+    ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
+    ul ul li, ul ol li,
+    ol ol li, ol ul li { margin-bottom: 6px; }
+    li { line-height: 18px; margin-bottom: 12px; }
+    ul.large li { line-height: 21px; }
+    li p { line-height: 21px; }
+
+    /* #Images ================================================== */
+
+    img.scale-with-grid {
+        max-width: 100%;
+        height: auto; }
     
      
     header{background: #fff; height: 80px; width: 100%;}
