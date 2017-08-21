@@ -192,12 +192,28 @@
     /* GENERALES */
 
     /* Enlaces */
-    a, a:visited { text-decoration: underline; outline: 0; }
+    a, a:visited { text-decoration: underline; outline: 0; text-decoration:none; }
     p a, p a:visited { line-height: inherit; }
 
 
     /* Listas */
-    ul li{margin-bottom: 15px;}
+    .list-basic {border: 1px solid #ccc;}
+    .list-basic li{width: 90%; min-height: 20px; padding: 11px 5% 9px 5%; border-bottom: 1px solid #ccc; font-family: 'avenirBook'; color: #363b40; font-size: 1.4em; line-height: 1.4em;}
+    .list-basic li:last-child{border-bottom: none;}
+
+    .list-link{border: 1px solid #ccc;}
+    .list-link li{width: 100%;height: 40px; border-bottom: 1px solid #ccc;  }
+    .list-link li a{display: block;width: 100%;height: 100%; text-indent: 15px;text-decoration: none; color: #363b40; font-family: 'avenirBook';font-size: 1.4em; line-height: 3.1em;}
+    .list-link a:hover{background:  #e6e6e6;}
+    .list-link li.current a{background: #1E88E5; color: #fff;}
+    .list-link li:last-child{border-bottom: none;}
+
+    .list-count{border: 1px solid #ccc;}
+    .list-count li{width: 96%; height: 26px; padding: 7px 2%;border-bottom: 1px solid #ccc; font-family: 'avenirLight'; font-size: 1.4em; line-height: 2em;}
+    .list-count li span{float: right;  display: block; width: 26px; height: 26px; border-radius:13px; color: #fff;font-family: 'avenirMedium'; text-align: center; line-height: 2em; }
+    .list-count li:last-child{border-bottom: none;}
+
+
 
     /* Imágenes */
     .img{display: block; width: 100%; height: 100%; background-position: center center !important; background-size: cover !important;}
@@ -246,6 +262,36 @@
     .paginacion ul li a{ display: block; width: 42px; height: 42px; border:1px solid #ccc; border-radius:22px; text-decoration: none; color: #363b40; transition:color .2s, border .2s; font-family: 'avenirHeavy'; }
     .paginacion ul li a:hover{color: #1e88e5; border:1px solid #1e88e5;}
     .paginacion ul li.current a{background: #1e88e5; color: #FFF; border: 1px solid #1e88e5;}
+
+
+    nav{height: 60px; width: 100%;} 
+    nav ul li{float: left; min-width: 120px; height: 60px; position: relative; }
+    nav ul li a{display: block; width: 100%; height: 100%; text-decoration: none; color: #333; font-family: 'avenirMedium';font-size: 1.5em; line-height: 4.2em; text-align: center; transition: color .3s;}
+    nav ul li a:hover{color: #999;}
+
+    nav ul li ul{position: absolute; top:60px; left: 0; background:#ccc; min-width: 200px; z-index: 1; visibility: hidden; opacity: 0;  transition: visibility .3s, opacity .3s;}
+    nav ul li:hover ul{visibility: visible; opacity: 1;}
+    nav ul li ul li{min-width: 170px; height: 50px; padding: 0 15px;}
+    nav ul li ul li a{text-align: left; line-height: 3.6em;}
+
+   .sec-blue nav ul li a,.sec-gray nav ul li a{color: #FFF;}
+
+   .sec-blue nav ul li ul{background:#1e88e5;}
+   .sec-blue nav ul li a:hover{color: #242B31;}
+   .sec-blue nav ul li ul li{border-bottom: 1px solid #0d61aa;}
+
+   .sec-gray nav ul li ul{background:#242B31;}
+   .sec-gray nav ul li a:hover{color: #1e88e5;}
+   .sec-gray nav ul li ul li{border-bottom: 1px solid #e6e6e6;}
+
+   /* Acordiones */
+    .accordion li{ width: 100%; min-height: 60px; border-bottom: 1px solid #ccc; }
+    .accordion li:last-child{border-bottom: none;}
+    .accordion li a{display: block; width: 98%; padding: 0 1%; min-height: 60px; background: #e6e6e6; font-family: 'avenirMedium'; font-size: 1.8em;  color: #363B40; line-height: 3.4em; transition: background .3s, color .3s;}
+    .accordion li a:hover{ background: #1e88e5; color: #FFF; }
+    .accordion li .contenido { width:94%; min-height:40px; padding: 20px 3%; font-size: 1em; line-height: 1em; text-indent: 0; background: #FFF; color: #999; font-family: arial; line-height: 1.2em; display: none; }
+    .accordion li a span{display:inline-block; width: 20px; height: 20px; line-height: 1.2em; text-align: center; transition: transform .3s;}
+    .accordion li a span.angulo{ -ms-transform: rotate(45deg); /* IE 9 */ -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */ transform: rotate(45deg);}
 
 
 
@@ -442,7 +488,7 @@
     .listas{width: 100%; height: 80px; background: #10549e ;}
     .listas ul{width: 100%; height: 100px; text-align: center; padding: 2em;}
     .listas ul li{width: 10%; height: 40px;float: left; margin-right: 40px;background: #10549e; }
-    .listas ul li a{;text-decoration: none; color: #fff;font-size: 2em;;font-family: 'avenirMedium';}
+    .listas ul li a{ text-decoration: none; color: #fff;font-size: 2em;;font-family: 'avenirMedium'; }
     /* Style */
 
     
