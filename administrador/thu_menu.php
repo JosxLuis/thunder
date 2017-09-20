@@ -19,23 +19,42 @@
 			<li <?php if($_GET['do'] == ""){ echo 'class="current"'; } ?>>
 				<a href="<?php echo ADMINURL; ?>"><i class="fa-icon-dashboard"></i> Tablero</a>
 			</li>
+			<li class="encabezado">
+				<a href="javascript:;" class="toggle" id="1"> <i class="fa-icon-gears"></i> Empresa <span><i class="fa-icon-caret-down"></i></span></a>
+					<div id="item_1" class="mostrar">
+						<ul>
+							<li <?php if(isset($_GET['do']) && $_GET['do'] == "acerca"){ ?>class="current"<?php } ?>><a href="<?php echo ADMINURL; ?>content/acerca"> <i class="fa-icon-user"></i> Acerca</a></li>
+							<li <?php if(isset($_GET['do']) && $_GET['do'] == "equipo"){ ?>class="current"<?php } ?>><a href="<?php echo ADMINURL; ?>content/equipo"> <i class="fa-icon-image"></i> Equipo</a></li>
+						</ul>
+					</div>
+			</li>
 			<li class="encabezado <?php if(isset($_GET['do']) && $_GET['do'] == "servicios"){ ?>current <?php } ?>">
 				<a href="<?php echo ADMINURL; ?>content/servicios/"> <i class="fa-icon-bolt"></i> Servicios</a>
 			</li>
 			<li class="encabezado <?php if(isset($_GET['do']) && $_GET['do'] == "portafolio"){ ?>current <?php } ?>">
 				<a href="<?php echo ADMINURL; ?>content/portafolio/"> <i class="fa-icon-suitcase"></i> portafolio</a>
 			</li>
-			<?php if($_SESSION[PREFIJO.'tipo'] == 1){ ?>
+			<li class="encabezado <?php if(isset($_GET['do']) && $_GET['do'] == "clientes"){ ?>current <?php } ?>">
+				<a href="<?php echo ADMINURL; ?>content/clientes/"> <i class="fa-icon-suitcase"></i> clientes</a>
+			</li>
+			<li class="encabezado <?php if(isset($_GET['do']) && $_GET['do'] == "proyectos"){ ?>current <?php } ?>">
+				<a href="<?php echo ADMINURL; ?>content/proyectos/"> <i class="fa-icon-suitcase"></i> proyectos</a>
+			</li>
+			 <li class="encabezado <?php if(isset($_GET['do']) && $_GET['do'] == "planes"){ ?>current <?php } ?>">
+				<a href="<?php echo ADMINURL; ?>content/planes/"> <i class="fa-icon-suitcase"></i> planes</a>
+			</li>
+			<li class="encabezado <?php if(isset($_GET['do']) && $_GET['do'] == "paquetes"){ ?>current <?php } ?>">
+				<a href="<?php echo ADMINURL; ?>content/paquetes/"> <i class="fa-icon-suitcase"></i> paquetes</a>
+			</li>
 			<li class="encabezado">
-				<a href="javascript:;" class="toggle" id="7"> <i class="fa-icon-gears"></i> Configuración <span><i class="fa-icon-caret-down"></i></span></a>
-					<div id="item_7" class="mostrar">
+				<a href="javascript:;" class="toggle" id="2"> <i class="fa-icon-gears"></i> ajustes <span><i class="fa-icon-caret-down"></i></span></a>
+					<div id="item_2" class="mostrar">
 						<ul>
 							<li <?php if(isset($_GET['do']) && $_GET['do'] == "usuarios"){ ?>class="current"<?php } ?>><a href="<?php echo ADMINURL; ?>content/usuarios"> <i class="fa-icon-user"></i> Usuarios</a></li>
 							<li <?php if(isset($_GET['do']) && $_GET['do'] == "slider"){ ?>class="current"<?php } ?>><a href="<?php echo ADMINURL; ?>content/slider"> <i class="fa-icon-image"></i> Slider</a></li>
 						</ul>
 					</div>
 			</li>
-			<?php } ?>
 		</ul>
 	</nav>
 </header>

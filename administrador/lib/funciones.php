@@ -39,10 +39,17 @@ function mostrarStatusBoletin($id){
   return $status;
 }
 
+function mostrarNombreTipoProyecto($id){
+  $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."proyecto_tipo WHERE id".DB_PREFIJO."proyecto_tipo=".$id."");
+  return $nombre['nombre'];
+}
+
+
 function mostrarNombreEstado($id){
   $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."estado WHERE id".DB_PREFIJO."estado=".$id."");
   return $nombre['nombre'];
 }
+
 
 function mostrarNombreMarca($id){
   $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."marca WHERE id".DB_PREFIJO."marca=".$id."");
