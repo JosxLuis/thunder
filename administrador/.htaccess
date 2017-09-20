@@ -1,0 +1,41 @@
+#AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/x-javascript
+
+#ServerSignature Off
+
+#Options +FollowSymLinks -MultiViews
+
+# Activar RewriteEngine
+RewriteEngine on
+
+RewriteBase /~argenis/thunder/administrador/
+
+
+
+RewriteRule ^([a-zA-Z0-9-]*)/?$ index.php?do=$1
+RewriteRule ^([a-zA-Z0-9-]*)/nuevo/?$ index.php?do=$1&act=nuevo
+RewriteRule ^([a-zA-Z0-9-]*)/editar/(\w+)/?$ index.php?do=$1&act=editar&id=$2
+RewriteRule ^([a-zA-Z0-9-]*)/eliminar/(\w+)/?$ index.php?do=$1&act=eliminar&id=$2
+RewriteRule ^([a-zA-Z0-9-]*)/pdf/(\w+)/?$ index.php?do=$1&act=pdf&id=$2
+RewriteRule ^([a-zA-Z0-9-]*)/archivos/(\w+)/?$ index.php?do=$1&act=archivos&id=$2
+RewriteRule ^([a-zA-Z0-9-]*)/categoria/(\w+)/?$ index.php?do=$1&act=categoria&id=$2
+RewriteRule ^([a-zA-Z0-9-]*)/fotos/(\w+)/?$ index.php?do=$1&act=fotos&id=$2
+
+RewriteRule ^settings/([a-zA-Z0-9-]*)/?$ index.php?do=$1
+RewriteRule ^settings/([a-zA-Z0-9-]*)/nuevo/?$ index.php?do=$1&act=nuevo
+RewriteRule ^settings/([a-zA-Z0-9-]*)/permisos/(\w+)/?$ index.php?do=$1&act=permisos&id=$2
+RewriteRule ^settings/([a-zA-Z0-9-]*)/editar/(\w+)/?$ index.php?do=$1&act=editar&id=$2
+RewriteRule ^settings/([a-zA-Z0-9-]*)/eliminar/(\w+)/?$ index.php?do=$1&act=eliminar&id=$2
+
+RewriteRule ^content/([a-zA-Z0-9-]*)/root/?$ index.php?do=$1&error=root
+RewriteRule ^content/([a-zA-Z0-9-]*)/archivos/(\w+)/eliminar/(\w+)/?$ index.php?do=$1&act=archivos&id=$2&borrar=$3
+RewriteRule ^content/([a-zA-Z0-9-]*)/archivos/(\w+)/?$ index.php?do=$1&act=archivos&id=$2
+RewriteRule ^content/([a-zA-Z0-9-]*)/archivos/(\w+)/page/(\w+)/?$ index.php?do=$1&act=archivos&id=$2&page=$3
+RewriteRule ^content/([a-zA-Z0-9-]*)/nuevo/?$ index.php?do=$1&act=nuevo
+RewriteRule ^content/([a-zA-Z0-9-]*)/editar/(\w+)/?$ index.php?do=$1&act=editar&id=$2
+RewriteRule ^content/([a-zA-Z0-9-]*)/detalle/(\w+)/?$ index.php?do=$1&act=detalle&id=$2
+RewriteRule ^content/([a-zA-Z0-9-]*)/eliminar/(\w+)/?$ index.php?do=$1&act=eliminar&id=$2
+RewriteRule ^content/([a-zA-Z0-9-]*)/pdf/(\w+)/?$ index.php?do=$1&act=pdf&id=$2
+RewriteRule ^content/([a-zA-Z0-9-]*)/?$ index.php?do=$1
+RewriteRule ^content/([a-zA-Z0-9-]*)/page/(\w+)/?$ index.php?do=$1&page=$2
+
+#ErrorDocument 404 error.php

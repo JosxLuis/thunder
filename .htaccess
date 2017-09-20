@@ -1,0 +1,20 @@
+#ServerSignature Off
+ 
+#AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript
+
+Options +FollowSymLinks -MultiViews
+
+#Header set Content-Security-Policy "default-src 'self';"
+
+# Activar RewriteEngine
+RewriteEngine on
+RewriteBase /~argenis/thunder/
+#RewriteCond %{HTTP_HOST} !^$
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteCond %{HTTPS}s ^on(s)|
+#RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+RewriteRule ^([a-zA-Z0-9-]*)/?$ index.php?do=$1
+
+
+ErrorDocument 404 /~argenis/thunder/404.php
