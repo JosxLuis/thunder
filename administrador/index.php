@@ -50,6 +50,21 @@ if(isset($_SESSION[PREFIJO.'idadmin'])){
 					include(PREFIJO.'servicios.php');
 				}
 			break;	
+				case "equipo":
+				if(isset($_GET['act'])){
+					switch(@$_GET['act']){
+						case "nuevo":include(PREFIJO.'equipo_add.php');
+						break;
+						case "editar":include(PREFIJO.'equipo_edit.php');
+						break;
+						case "eliminar":include(PREFIJO.'equipo.php');
+						break;
+					}
+				}else{
+					include(PREFIJO.'equipo.php');
+				}
+			break;	
+			break;	
 				case "portafolio":
 				if(isset($_GET['act'])){
 					switch(@$_GET['act']){
