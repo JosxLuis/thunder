@@ -102,6 +102,8 @@
 
 	$consulta = devolverValorQuery("SELECT *, date_format(fecha_ingreso,'%Y-%m-%d') as fecha_ingreso FROM ".DB_PREFIJO."empresa WHERE id".DB_PREFIJO."empresa=".$_GET['id']." ");
 
+	//Un comentario para que se modifique el archivo
+
 
 ?>
 <!DOCTYPE HTML>
