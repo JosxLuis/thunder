@@ -1,5 +1,4 @@
 <?php
-
 function generateRandomString($length) {
     $characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     $randomString = '';
@@ -20,60 +19,9 @@ function generateNickname($correo){
   return $nickname;
 }
 
-function mostrarStatusBoletin($id){
-  switch ($id) {
-    case '0':
-      $status = "Borrador";
-      break;
-    case '1':
-      $status = "Publicado";
-      break;
-    case '2':
-      $status = "Papelera";
-      break;
-    default:
-      $status = "Publicado";
-      break;
-    
-  }
-  return $status;
-}
-
-function mostrarNombreTipoProyecto($id){
-  $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."proyecto_tipo WHERE id".DB_PREFIJO."proyecto_tipo=".$id."");
-  return $nombre['nombre'];
-}
-
-
-function mostrarNombreEstado($id){
-  $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."estado WHERE id".DB_PREFIJO."estado=".$id."");
-  return $nombre['nombre'];
-}
-
-
-function mostrarNombreMarca($id){
-  $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."marca WHERE id".DB_PREFIJO."marca=".$id."");
-  return $nombre['nombre'];
-}
-
-function mostrarNombreCategoria($id){
-  $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."categoria WHERE id".DB_PREFIJO."categoria=".$id."");
-  return $nombre['nombre'];
-}
-
-function mostrarProductoMarca($id){
-  $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."marca WHERE id".DB_PREFIJO."marca=(SELECT id".DB_PREFIJO."marca FROM ".DB_PREFIJO."categoria WHERE id".DB_PREFIJO."categoria=".$id.")");
-  return $nombre['nombre'];
-}
-
-function mostrarNombreTipoUsuario($id){
-  $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."administrador_rol WHERE id".DB_PREFIJO."administrador_rol=".$id."");
-  return $nombre['nombre'];
-}
-
-function mostrarNombreActividadTipo($id){
-  $nombre = devolverValorQuery("SELECT nombre FROM ".DB_PREFIJO."actividad_tipo WHERE id".DB_PREFIJO."actividad_tipo=".$id."");
-  return $nombre['nombre'];
+function mostrarNombre($id,$tabla,$campo){
+  $nombre = devolverValorQuery("SELECT ".$campo." FROM ".DB_PREFIJO.$tabla." WHERE id".DB_PREFIJO.$tabla."=".$id."");
+  return $nombre[$campo];
 }
 
 function mostrarSioNo($id){
@@ -86,38 +34,6 @@ function mostrarSioNo($id){
       break;
     default:
       $status = "-";
-      break;
-    
-  }
-  return $status;
-}
-
-function mostrarNombreDescuento($id){
-   switch ($id) {
-      case '0':
-        $status = "No";
-        break;
-      case '1':
-        $status = "Sí";
-        break;
-      default:
-        $status = "-";
-        break;
-      
-    }
-    return $status;
-}
-
-function mostrarNombreSexo($id){
-  switch ($id) {
-    case 'M':
-      $status = "Masculino";
-      break;
-    case 'F':
-      $status = "Femenino";
-      break;
-    default:
-      $status = "No definido";
       break;
     
   }
@@ -141,11 +57,6 @@ function mostrarPoststatus($id){
     
   }
   return $status;
-}
-
-function nombreCategoria($idcategoria){
-  $resCategoria = devolverValorQuery("SELECT titulo FROM post_category WHERE idpost_category =".$idcategoria." ");
-  return $resCategoria['titulo'];
 }
 
 function nombreBlogEstatus($id){
@@ -173,31 +84,6 @@ function mostrarLocalidad($id){
   return $ubicacion;
 }
 
-function contadorLikes($id){
-  $likes_count = cantidadRegistros("SELECT * FROM likes WHERE idhistoria=".$id." ");
-  return $likes_count;
-}
-
-function postLiked($id,$user){
-  $revisar_post = cantidadRegistros("SELECT * FROM likes WHERE idhistoria=".$id." AND idusuario=".$user." ");
-  return $revisar_post;
-}
-
-function mostrarPortadaMiniatura($id){
-  $foto = devolverValorQuery("SELECT miniatura FROM foto WHERE idregalo =".$id." ");
-  $ruta = URL.$foto['miniatura'];
-  return $ruta;
-}
-function mostrarPortadaMediana($id){
-  $foto = devolverValorQuery("SELECT mediana FROM foto WHERE idregalo =".$id." ");
-  $ruta = URL.$foto['mediana'];
-  return $ruta;
-}
-function mostrarPortadaGrande($id){
-  $foto = devolverValorQuery("SELECT original FROM foto WHERE idregalo =".$id." ");
-  $ruta = URL.$foto['original'];
-  return $ruta;
-}
 function mostrarIdEstado($id){
 	$nombre = devolverValorQuery("SELECT idestado FROM municipio WHERE idmunicipio=".$id."");
 	return $nombre['idestado'];
@@ -206,8 +92,6 @@ function mostrarNombreCiudad($id){
 	$nombre = devolverValorQuery("SELECT nombre FROM municipio WHERE idmunicipio=".$id."");
 	return $nombre['nombre'];
 }
-
-
 
 function calculaPeriodo($periodo){
     $fecha = date("Y-m-d H:i:s");
@@ -226,10 +110,6 @@ function calculaPeriodoPublicar($periodo){
     return $fechaFinal;
 }
 
-function mostrarNombreNotifica($id){
-  $nombre = devolverValorQuery("SELECT nombre FROM notificacion_correo WHERE idnotificacion_correo=".$id."");
-  return $nombre['nombre'];
-}
 
 function limpiar_cadena($string)
 {

@@ -1,16 +1,18 @@
 <?php
 	if(isset($_POST['eliminar-foto']) && $_POST['eliminar-foto'] != ""){
-		$portada = devolverValorQuery("SELECT portada FROM ".DB_PREFIJO."servicio WHERE id".DB_PREFIJO."servicio=".$_GET['id']." ");
-		if($portada['portada'] != ""){
-    		unlink("../".$portada['portada']);
+		$logotipo = devolverValorQuery("SELECT logotipo FROM ".DB_PREFIJO."empresa WHERE id".DB_PREFIJO."empresa=".$_GET['id']." ");
+		if($logotipo['logotipo'] != ""){
+    		unlink("../".$logotipo['logotipo']);
 		}
-		$borrarEntrada = "UPDATE ".DB_PREFIJO."servicio SET portada = '' WHERE id".DB_PREFIJO."servicio= ".$_GET['id']."";
+		$borrarEntrada = "UPDATE ".DB_PREFIJO."empresa SET logotipo = '' WHERE id".DB_PREFIJO."empresa= ".$_GET['id']."";
 		mysqli_query($conexion,$borrarEntrada) or die(mysql_error());
 		$curpage = curPageURL();
 		header("Location:".$curpage);
 	}
 
-	if(isset($_POST['editar']) && $_POST['proyecto_tipo'] != ""){
+	$fotografia = "";
+
+	if(isset($_POST['editar']) && $_POST['nombre'] != ""){
 		$fecha = date('Y-m-d H:i:s');
 
 		if($_FILES['imagen']['name'] != null){
@@ -74,24 +76,20 @@
 				
 				unlink($original_location);
 
-				$portada = devolverValorQuery("SELECT portada FROM ".DB_PREFIJO."servicio WHERE id".DB_PREFIJO."servicio=".$_GET['id']." ");
-				if($portada['portada'] != "" && $portada['portada'] != "img/no-picture.jpg"){
-		    		unlink("../".$portada['portada']);
+				$logotipo = devolverValorQuery("SELECT logotipo FROM ".DB_PREFIJO."empresa WHERE id".DB_PREFIJO."empresa=".$_GET['id']." ");
+				if($logotipo['logotipo'] != "" && $logotipo['logotipo'] != "img/no-picture.jpg"){
+		    		unlink("../".$logotipo['logotipo']);
 				}
 		
 				$ruta_image_normal = $dir."imagen_".$random.".".$file_ext;
 
-				$fotografia = "portada='".$ruta_image_normal."', ";
+				$fotografia = "logotipo='".$ruta_image_normal."', ";
 
-			}else{
-				$fotografia = "";
 			}
-		}else{
-			$fotografia = "";
 		}
 
 
-		$editarRegistro = "UPDATE ".DB_PREFIJO."servicio SET $fotografia id".DB_PREFIJO."proyecto_tipo=".$_POST['proyecto_tipo']." ,portada='".utf8_decode($_POST['portada'])."',icono='".utf8_decode($_POST['icono'])."',nombre='".utf8_decode($_POST['nombre'])."',introduccion='".utf8_decode($_POST['introduccion'])."',descripcion='".utf8_decode($_POST['descripcion'])."',tags='".utf8_decode($_POST['tags'])."' WHERE id".DB_PREFIJO."servicio=".$_GET['id']." ";
+		$editarRegistro = "UPDATE ".DB_PREFIJO."empresa SET $fotografia logotipo='".utf8_decode($_POST['logotipo'])."',apellidos='".utf8_decode($_POST['apellidos'])."',puesto='".utf8_decode($_POST['puesto'])."',facebook='".utf8_decode($_POST['facebook'])."',twitter='".utf8_decode($_POST['twitter'])."',instagram='".utf8_decode($_POST['instagram'])."',correo='".utf8_decode($_POST['correo'])."' WHERE id".DB_PREFIJO."empresa=".$_GET['id']." ";
 		//echo $editarRegistro; exit();
 		mysqli_query($conexion,$editarRegistro) or die(mysql_error());
 
@@ -99,19 +97,18 @@
 
 	}
 
-	$proyecto = "SELECT * FROM ".DB_PREFIJO."proyecto_tipo";
+	$proyecto = "SELECT * FROM ".DB_PREFIJO."nombre";
 	$resProyecto = mysqli_query($conexion,$proyecto);
 
-	$consulta = devolverValorQuery("SELECT * FROM ".DB_PREFIJO."servicio WHERE id".DB_PREFIJO."servicio=".$_GET['id']." ");
+	$consulta = devolverValorQuery("SELECT *, date_format(fecha_ingreso,'%Y-%m-%d') as fecha_ingreso FROM ".DB_PREFIJO."empresa WHERE id".DB_PREFIJO."empresa=".$_GET['id']." ");
 
 
 ?>
 <!DOCTYPE HTML>
 <html lang="es-MX">
-
 <head>
 	<meta charset="UTF-8">
-	<title>Servicios - <?php echo PROYECTO; ?></title>
+	<title>Empresa - <?php echo PROYECTO; ?></title>
 	<!-- Metas  Especificas para  mobiles -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- CSS -->
@@ -146,30 +143,29 @@
 			<div class="ten columns">
 				<div class="list-items">
 					<div class="titulo">
-						<h4>Editar Servicio</h4>
+						<h4>Editar equipo</h4>
 					</div>
 			        <div class="form-add">
 			        	<form name="form1" action="" method="post" enctype="multipart/form-data">
-			        		<label for="marca">Tipo de proyecto <span>*</span></label>
-							<select name="proyecto_tipo" id="marca" required>
-								<option value="<?php echo $consulta['id'.DB_PREFIJO.'proyecto_tipo']; ?>"><?php echo utf8_encode(mostrarNombre($consulta['id'.DB_PREFIJO.'proyecto_tipo'],"proyecto_tipo","nombre")); ?></option>
-								<?php while($rowProyecto = mysqli_fetch_array($resProyecto)){ ?>
-									<option value="<?php echo $rowProyecto['id'.DB_PREFIJO.'proyecto_tipo']; ?>"><?php echo utf8_encode($rowProyecto['nombre']); ?></option>
-								<?php } ?>
-							</select>
-			        		<label for="foto">Portada</label>
+			        		<label for="foto">logotipo</label>
 			        		<div class="mintext">Si no seleccionas otra imagen se conserva la imagen anterior</div>
 			    			<input type="file" name="imagen">
-			    			<label for="clave">Icono <span>*</span></label>
-			        		<input type="text" name="icono" placeholder="Ej. icon-servicio" value="<?php echo utf8_encode($consulta['icono']); ?>" required>
 			        		<label for="nombre">Nombre <span>*</span></label>
-			        		<input type="text" name="nombre" placeholder="Nombre del servicio" value="<?php echo utf8_encode($consulta['nombre']); ?>"  required>
-			        		<label for="condicion">Introducción</label>
-			        		<input type="text" name="introduccion" placeholder="Máx 200 caractéres" value="<?php echo utf8_encode($consulta['introduccion']); ?>" maxlength="200"  required>
-			        		<label for="descripcion">Descripcion</label>
-			        		<textarea  name="descripcion" placeholder="Descripción"><?php echo utf8_encode($consulta['descripcion']); ?></textarea>
-			        		<label for="condicion">Etiquetas</label>
-			        		<input type="text" name="tags" placeholder="Separados por coma" maxlength="200" value="<?php echo utf8_encode($consulta['tags']); ?>"  required>
+			        		<input type="text" name="nombre" placeholder="Nombres" value="<?php echo utf8_encode($consulta['nombre']); ?>" required>
+			        		<label for="apellidos">apellidos <span>*</span></label>
+			        		<input type="text" name="apellidos" placeholder="Apellidos" value="<?php echo utf8_encode($consulta['apellidos']); ?>" required>
+			        		<label for="fecha de ingreso">fecha de ingreso <span>*</span></label>
+			        		<input  type="text" name="fecha_ingreso" placeholder="ej: YYYY-MM-DD" value="<?php echo utf8_encode($consulta['fecha_ingreso']); ?>" required>
+			        		<label for="puesto">puesto <span>*</span></label>
+			        		<input type="text" name="puesto" value="<?php echo utf8_encode($consulta['puesto']); ?>" placeholder="puesto">
+			        		<label for="correo">correo <span>*</span></label>
+			        		<input type="text" name="correo" placeholder="ej: micorreo@thundertechnology.mx" value="<?php echo utf8_encode($consulta['correo']); ?>" required>
+			        		<label for="facebook">facebook</label>
+			        		<input type="text" name="facebook" value="<?php echo utf8_encode($consulta['facebook']); ?>" placeholder="facebook">
+							<label for="twitter">twitter</label>
+			        		<input type="text" name="twitter" value="<?php echo utf8_encode($consulta['twitter']); ?>" placeholder="twitter">
+			        		<label for="instagram">instagram</label>
+			        		<input type="text" name="instagram" value="<?php echo utf8_encode($consulta['instagram']); ?>" placeholder="instagram">
 			    			<label for="requerido" class="req"><span>*</span> campos requeridos</label>
 			        		<input type="submit" name="editar" value="Guardar">
 			        	</form>
@@ -180,9 +176,9 @@
 				<div class="list-items">
 					<div class="form-add">
 						<div class="foto-perfil">
-						<label for="portada">Foto de perfil</label>
-		        		<?php if($consulta['portada'] != ""){ ?>
-	        				<div class="foto" style="background:url(<?php echo URL.$consulta['portada']; ?>)"></div>
+						<label for="logotipo">Foto de perfil</label>
+		        		<?php if($consulta['logotipo'] != ""){ ?>
+	        				<div class="foto" style="background:url(<?php echo URL.$consulta['logotipo']; ?>)"></div>
 	        				<div class="eliminar-foto">
 		        				<form name="form2" action="" method="post">
 		        					<input type="submit" class="delete" name="eliminar-foto" value="Eliminar Fotografía" class="confirm" title="¿Está seguro de borrar la fotografía?">

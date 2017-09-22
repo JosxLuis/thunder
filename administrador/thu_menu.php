@@ -31,15 +31,12 @@
 			<li class="encabezado <?php if(isset($_GET['do']) && $_GET['do'] == "servicios"){ ?>current <?php } ?>">
 				<a href="<?php echo ADMINURL; ?>content/servicios/"> <i class="fa-icon-bolt"></i> Servicios</a>
 			</li>
-			<li class="encabezado <?php if(isset($_GET['do']) && $_GET['do'] == "portafolio"){ ?>current <?php } ?>">
-				<a href="<?php echo ADMINURL; ?>content/portafolio/"> <i class="fa-icon-suitcase"></i> portafolio</a>
-			</li>
 			<li class="encabezado">
 				<a href="javascript:;" class="toggle" id="3"> <i class="fa-icon-gears"></i> Clientes <span><i class="fa-icon-caret-down"></i></span></a>
 					<div id="item_3" class="mostrar">
 						<ul>
-							<li <?php if(isset($_GET['do']) && $_GET['do'] == "acerca"){ ?>class="current"<?php } ?>><a href="<?php echo ADMINURL; ?>content/cliente-empresas"> <i class="fa-icon-image"></i> Empresas</a></li>
-							<li <?php if(isset($_GET['do']) && $_GET['do'] == "equipo"){ ?>class="current"<?php } ?>><a href="<?php echo ADMINURL; ?>content/cliente-usuarios"> <i class="fa-icon-user"></i> Usuarios</a></li>
+							<li <?php if(isset($_GET['do']) && $_GET['do'] == "empresas"){ ?>class="current"<?php } ?>><a href="<?php echo ADMINURL; ?>content/empresas"> <i class="fa-icon-image"></i> Empresas</a></li>
+							<li <?php if(isset($_GET['do']) && $_GET['do'] == "clientes"){ ?>class="current"<?php } ?>><a href="<?php echo ADMINURL; ?>content/clientes"> <i class="fa-icon-user"></i> Usuarios</a></li>
 						</ul>
 					</div>
 			</li>

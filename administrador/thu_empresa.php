@@ -1,11 +1,11 @@
 <?php
 if(isset($_GET['act']) && $_GET['act'] == "eliminar"){
-	$portada = devolverValorQuery("SELECT portada FROM ".DB_PREFIJO."servicio WHERE id".DB_PREFIJO."servicio=".$_GET['id']." ");
-	if($portada['portada'] != ""){
-		unlink("../".$portada['portada']);
+	$logotipo = devolverValorQuery("SELECT logotipo FROM ".DB_PREFIJO."empresa WHERE id".DB_PREFIJO."empresa=".$_GET['id']." ");
+	if($logotipo['logotipo'] != ""){
+		unlink("../".$logotipo['logotipo']);
 	}
 	
-    $borrarEntrada = "DELETE  FROM ".DB_PREFIJO."servicio WHERE id".DB_PREFIJO."servicio= ".$_GET['id']."";
+    $borrarEntrada = "DELETE  FROM ".DB_PREFIJO."empresa WHERE id".DB_PREFIJO."empresa= ".$_GET['id']."";
     mysqli_query($conexion,$borrarEntrada);
     header("Location:".ADMINURL."content/".$_GET['do']);
 }
@@ -30,12 +30,12 @@ if(isset($_GET['act']) && $_GET['act'] == "eliminar"){
             $busqueda .= " AND nombre LIKE '%".$_POST['nombre']."%' ";
         }
 
-        $cantidad = cantidadRegistros("SELECT * FROM ".DB_PREFIJO."servicio WHERE 1 ".$busqueda."");
+        $cantidad = cantidadRegistros("SELECT * FROM ".DB_PREFIJO."empresa WHERE 1 ".$busqueda."");
         
         if($cantidad != 0){
             $cat=new pagination($cantidad,25,$current_page,5 /*number of button*/);
             mysqli_query($conexion,"SET lc_time_names = 'es_MX'" );
-            $registro = "SELECT *,date_format(creado, '%d-%m-%Y') as creado FROM ".DB_PREFIJO."servicio WHERE 1 ".$busqueda." ORDER BY id".DB_PREFIJO."servicio
+            $registro = "SELECT *,date_format(creado, '%d-%m-%Y') as creado FROM ".DB_PREFIJO."empresa WHERE 1 ".$busqueda." ORDER BY id".DB_PREFIJO."empresa
              LIMIT $cat->Start , $cat->End";
             $resultado = mysqli_query($conexion,$registro);
         }
@@ -43,12 +43,14 @@ if(isset($_GET['act']) && $_GET['act'] == "eliminar"){
     }else{
         
 
-        $cantidad = cantidadRegistros("SELECT * FROM ".DB_PREFIJO."servicio WHERE 1");
+        $cantidad = cantidadRegistros("SELECT * FROM ".DB_PREFIJO."empresa WHERE 1");
         
-        $cat=new pagination($cantidad,25,$current_page,5 /*number of button*/);
-        mysqli_query($conexion,"SET lc_time_names = 'es_MX'" );
-        $registro = "SELECT *,date_format(creado, '%d-%m-%Y') as creado FROM ".DB_PREFIJO."servicio  ORDER BY id".DB_PREFIJO."servicio DESC LIMIT $cat->Start , $cat->End";
-        $resultado = mysqli_query($conexion,$registro);
+        if($cantidad != 0){
+	        $cat=new pagination($cantidad,25,$current_page,5 /*number of button*/);
+	        mysqli_query($conexion,"SET lc_time_names = 'es_MX'" );
+	        $registro = "SELECT *,date_format(creado, '%d-%m-%Y') as creado FROM ".DB_PREFIJO."empresa  ORDER BY id".DB_PREFIJO."empresa DESC LIMIT $cat->Start , $cat->End";
+	        $resultado = mysqli_query($conexion,$registro);
+	    }
 
     }
 
@@ -57,7 +59,7 @@ if(isset($_GET['act']) && $_GET['act'] == "eliminar"){
 <html lang="es-MX">
 <head>
 	<meta charset="UTF-8">
-	<title>Servicios - <?php echo PROYECTO; ?></title>
+	<title>Empresa - <?php echo PROYECTO; ?></title>
 	<!-- Metas  Especificas para  mobiles -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- CSS -->
@@ -84,24 +86,22 @@ if(isset($_GET['act']) && $_GET['act'] == "eliminar"){
 			<div class="sixteen columns">
 				<div class="list-items">
 					<div class="titulo">
-						<h4>Servicios</h4>
-						<p>Lista de todos los servicios</p>
+						<h4>Empresa</h4>
+						<p>Lista de las empresas</p>
 					</div>
 					
 					<?php if($_SESSION[PREFIJO.'tipo'] == 1){ ?>
 					<div class="add-button"><a href="<?php echo ADMINURL; ?>content/<?php echo $_GET['do']; ?>/nuevo"> Nuevo</a></div>
 					<?php } ?>
-	        	<table class="regular">
+	        	<table class="mixta">
 	        		<thead>
 	        			<tr>
 	        			
-	        				<td width="25%">Portada</td>
-	        				<td width="15%">Nombre</td>
-	        				<td width="20%">Introduccion</td>
-	        				<td width="15%">Tipo de proyecto</td>
-	        				<td width="10%">Creado</td>
+	        				<td width="8%">logotipo</td>
+	        				<td width="10%">Razon social</td>
+	        				<td width="10%">RFC</td>
+	        				<td width="15%">Correo</td>
 	        				<?php if($_SESSION[PREFIJO.'tipo'] == 1){ ?>
-	        				<td width="10%">&nbsp;</td>
 	        				<td width="10%">&nbsp;</td>
 	        				<?php } ?>
 	        			</tr>
@@ -109,24 +109,21 @@ if(isset($_GET['act']) && $_GET['act'] == "eliminar"){
 	        		<tbody>
 	        			<?php if($cantidad != 0){ ?>
 	        				<?php 
-	        					while($rowServicio = mysqli_fetch_array($resultado)){
-	        						//$tipo = devolverValorQuery("SELECT tipo FROM ".DB_PREFIJO."servicios_tipo WHERE id".DB_PREFIJO."servicios_tipo =".$rowServicio['id'.DB_PREFIJO.'servicios_tipo']" ");
+	        					while($rowEmpresa = mysqli_fetch_array($resultado)){
+	        						//$tipo = devolverValorQuery("SELECT tipo FROM ".DB_PREFIJO."equipos_tipo WHERE id".DB_PREFIJO."equipos_tipo =".$rowEmpresa['id'.DB_PREFIJO.'equipos_tipo']" ");
 	        				?>
 			        			<tr>
-			        				<td><div class="fotografia" style="background:url(<?php echo URL.$rowServicio['portada']; ?>) #e6e6e6;"></div></td>
-			        				<td><?php echo utf8_encode($rowServicio['nombre']); ?></td>
-			        				<td><?php echo utf8_encode($rowServicio['introduccion']); ?></td>
-			        				<td><?php echo utf8_encode(mostrarNombre($rowServicio['id'.DB_PREFIJO.'proyecto_tipo'],"proyecto_tipo","nombre")); ?></td>
-			        				<td><?php echo utf8_encode($rowServicio['creado']); ?></td>
-			        				<?php if($_SESSION[PREFIJO.'tipo'] == 1){ ?>
-			        				<td><a href="<?php echo ADMINURL; ?>content/<?php echo $_GET['do']; ?>/editar/<?php echo $rowServicio['id'.DB_PREFIJO.'servicio']; ?>/">Editar</a></td>
-			        				<td><a href="<?php echo ADMINURL; ?>content/<?php echo $_GET['do']; ?>/eliminar/<?php echo $rowServicio['id'.DB_PREFIJO.'servicio']; ?>/" class="confirm" title="¿Está seguro de borrar este registro?" >Eliminar</a></td>
-			        				<?php } ?>
+			        				<td><div class="foto" <?php if($rowEmpresa['logotipo'] != "" ){ ?> style="background:url(<?php echo URL.$rowEmpresa['logotipo']; ?>)" <?php } ?>> <?php if($rowEmpresa['logotipo'] == "" ){ ?><i class="fa-icon-barcode"><?php } ?></div></td>
+			        				<td><?php echo utf8_encode($rowEmpresa['razon_social']); ?></td>
+			        				<td><?php echo utf8_encode($rowEmpresa['rfc']); ?></td>
+									<td><?php echo utf8_encode($rowEmpresa['correo']); ?></td>
+			        				<td><a href="<?php echo ADMINURL; ?>content/<?php echo $_GET['do']; ?>/editar/<?php echo $rowEmpresa['id'.DB_PREFIJO.'empresa']; ?>/">Editar</a></td>
+			        				<td><a href="<?php echo ADMINURL; ?>content/<?php echo $_GET['do']; ?>/eliminar/<?php echo $rowEmpresa['id'.DB_PREFIJO.'empresa']; ?>/" class="confirm" title="¿Está seguro de borrar este registro?" >Eliminar</a></td>
 			        			</tr>
 		        			<?php } ?>
 	        			<?php }else{ ?>
 	        				<tr>
-	        					<td colspan="9" class="center">No se encontraron resultados</td>
+	        					<td colspan="7" class="center">No se encontraron resultados</td>
 	        				</tr>
 	        			<?php } ?>
 	        		</tbody>

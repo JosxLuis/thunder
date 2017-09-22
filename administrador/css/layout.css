@@ -284,7 +284,7 @@ table.archivos tbody tr:nth-child(even){background: #f7f7f7;}
 
 .form-permisos{width: 96%; margin:0 auto;}
 
-table tr td .foto{display: block; width: 30px; height: 30px; border-radius: 16px; border:1px solid #ccc; background-color:#FFF; background-position: center center !important; background-size: cover !important; text-align: center;}
+table tr td .foto{display: block; width: 30px; height: 30px; margin:0 auto; border-radius: 16px; border:1px solid #ccc; background-color:#FFF; background-position: center center !important; background-size: cover !important; text-align: center;}
 table tr td .foto i{color: #ccc; font-size: 1.5em; line-height: 1.4em; position: relative; z-index: 0;}
 
 

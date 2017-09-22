@@ -50,7 +50,7 @@ if(isset($_SESSION[PREFIJO.'idadmin'])){
 					include(PREFIJO.'servicios.php');
 				}
 			break;	
-				case "equipo":
+			case "equipo":
 				if(isset($_GET['act'])){
 					switch(@$_GET['act']){
 						case "nuevo":include(PREFIJO.'equipo_add.php');
@@ -63,9 +63,22 @@ if(isset($_SESSION[PREFIJO.'idadmin'])){
 				}else{
 					include(PREFIJO.'equipo.php');
 				}
-			break;	
-			break;	
-				case "portafolio":
+			break;
+			case "clientes":
+				if(isset($_GET['act'])){
+					switch(@$_GET['act']){
+						case "nuevo":include(PREFIJO.'cliente_usuarios_add.php');
+						break;
+						case "editar":include(PREFIJO.'cliente_usuarios_edit.php');
+						break;
+						case "eliminar":include(PREFIJO.'cliente_usuarios.php');
+						break;
+					}
+				}else{
+					include(PREFIJO.'cliente_usuarios.php');
+				}
+			break;
+			case "portafolio":
 				if(isset($_GET['act'])){
 					switch(@$_GET['act']){
 						case "nuevo":include(PREFIJO.'portafolio_add.php');
@@ -77,6 +90,34 @@ if(isset($_SESSION[PREFIJO.'idadmin'])){
 					}
 				}else{
 					include(PREFIJO.'portafolio.php');
+				}
+			break;	
+			case "proyectos":
+				if(isset($_GET['act'])){
+					switch(@$_GET['act']){
+						case "nuevo":include(PREFIJO.'proyecto_add.php');
+						break;
+						case "editar":include(PREFIJO.'proyecto_edit.php');
+						break;
+						case "eliminar":include(PREFIJO.'proyectos.php');
+						break;
+					}
+				}else{
+					include(PREFIJO.'proyectos.php');
+				}
+			break;
+			case "empresas":
+				if(isset($_GET['act'])){
+					switch(@$_GET['act']){
+						case "nuevo":include(PREFIJO.'empresa_add.php');
+						break;
+						case "editar":include(PREFIJO.'empresa_edit.php');
+						break;
+						case "eliminar":include(PREFIJO.'empresa.php');
+						break;
+					}
+				}else{
+					include(PREFIJO.'empresa.php');
 				}
 			break;	
 			case "slider":
