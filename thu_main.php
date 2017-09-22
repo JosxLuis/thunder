@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-	<title>Thunder</title>
+	<title>Thunder Technology</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Equipo de profesionales en el desarrollo de hardware y software con la misión de ofrecer tecnología de alta calidad al alcance de todos.">
 	<link rel="stylesheet" type="text/css" href="<?php echo URL; ?>css/skeleton.css">

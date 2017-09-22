@@ -74,62 +74,7 @@
 			<div class="sixteen columns">
 				<div class="box mh-100 pd-30">
 					<h3 class="tx-cen">Equipo</h3>
-					<p class="tx-cen">Lorem ipsum dolor sit amet, consectetur adipisicing elit <br> Thunder Technology</p>
-				</div>
-			</div>
-			
-			<div class="four columns">
-				<div class="integrante">
-					<div class="foto">
-						<a href="#" style="background: url(<?php echo URL; ?>img/equipo1.png);"></a>
-					</div>
-					<h5>Luis Angel Gutierrez Pérez</h5>
-					<span>Diseño de Interfaz</span>
-				</div>
-			</div>
-			<div class="four columns">
-				<div class="integrante">
-					<div class="foto">
-						<a href="#" style="background: url(<?php echo URL; ?>img/equipo2.jpg);"></a>
-					</div>
-					<h5>Luis Fernando Gómez del Porte</h5>
-					<span>Programador</span>
-				</div>
-			</div>
-			<div class="four columns">
-				<div class="integrante">
-					<div class="foto">
-						<a href="#" style="background: url(<?php echo URL; ?>img/equipo3.jpg);"></a>
-					</div>
-					<h5>José luis Aguilar Nucamendi</h5>
-					<span>Programador</span>
-				</div>
-			</div>
-			<div class="four columns">
-				<div class="integrante">
-					<div class="foto">
-						<a href="#" style="background: url(<?php echo URL; ?>img/equipo4.jpg);"></a>
-					</div>
-					<h5>Jesus Afdel Guzmán Luis</h5>
-					<span>Programador</span>
-				</div>
-			</div>
-			<div class="four columns">
-				<div class="integrante">
-					<div class="foto">
-						<a href="#" style="background: url(<?php echo URL; ?>img/equipo5.jpg);"></a>
-					</div>
-					<h5>Diego De Jesus Peréz Nangullasmú</h5>
-					<span>Ingeniero de Hardware</span>
-				</div>
-			</div>
-			<div class="four columns">
-				<div class="integrante">
-					<div class="foto">
-						<a href="#" style="background: url(<?php echo URL; ?>img/equipo6.jpg);"></a>
-					</div>
-					<h5>Cesar Ulises Galvez Jimenez</h5>
-					<span>Ingeniero de Hardware</span>
+					<p class="tx-cen">Conoce al equipo que se encarga de hacer tus proyectos realidad <br> Team Thunder Technology</p>
 				</div>
 			</div>
 			<div class="four columns">
@@ -138,16 +83,7 @@
 						<a href="#" style="background: url(<?php echo URL; ?>img/equipo7.jpg);"></a>
 					</div>
 					<h5>Alfredo Argenis Barraza Guillén</h5>
-					<span>Diseño y Desarrollo Web</span>
-				</div>
-			</div>
-			<div class="four columns">
-				<div class="integrante">
-					<div class="foto">
-						<a href="#" style="background: url(<?php echo URL; ?>img/equipo8.jpg);"></a>
-					</div>
-					<h5>Juan Carlos Pérez Pérez</h5>
-					<span>Programador</span>
+					<span>Desarrollador Web Sr.</span>
 				</div>
 			</div>
 			<div class="four columns">
@@ -156,8 +92,71 @@
 						<a href="#" style="background: url(<?php echo URL; ?>img/equipo9.jpg);"></a>
 					</div>
 					<h5>Josue Toledo Goméz</h5>
-					<span>Desarrollo de Hardware</span>
+					<span>Ingeniero en Hardware Sr.</span>
 				</div>
+			</div>
+			<div class="four columns">
+				<div class="integrante">
+					<div class="foto">
+						<a href="#" style="background: url(<?php echo URL; ?>img/equipo2.jpg);"></a>
+					</div>
+					<h5>Luis Fernando Gómez del Porte</h5>
+					<span>Programador Jr.</span>
+				</div>
+			</div>
+			<div class="four columns">
+				<div class="integrante">
+					<div class="foto">
+						<a href="#" style="background: url(<?php echo URL; ?>img/equipo3.jpg);"></a>
+					</div>
+					<h5>José luis Aguilar Nucamendi</h5>
+					<span>Programador Jr.</span>
+				</div>
+			</div>
+			<div class="four columns">
+				<div class="integrante">
+					<div class="foto">
+						<a href="#" style="background: url(<?php echo URL; ?>img/equipo4.jpg);"></a>
+					</div>
+					<h5>Jesus Afdel Guzmán Luis</h5>
+					<span>Ingeniero de Hardware Jr.</span>
+				</div>
+			</div>
+			<div class="four columns">
+				<div class="integrante">
+					<div class="foto">
+						<a href="#" style="background: url(<?php echo URL; ?>img/equipo5.jpg);"></a>
+					</div>
+					<h5>Diego De Jesus Peréz Nangullasmú</h5>
+					<span>Ingeniero de Hardware Jr.</span>
+				</div>
+			</div>
+			<div class="four columns">
+				<div class="integrante">
+					<div class="foto">
+						<a href="#" style="background: url(<?php echo URL; ?>img/equipo6.jpg);"></a>
+					</div>
+					<h5>Cesar Ulises Galvez Jimenez</h5>
+					<span>Ingeniero de Hardware Jr.</span>
+				</div>
+			</div>
+			<div class="four columns">
+				<div class="integrante">
+					<div class="foto">
+						<a href="#" style="background: url(<?php echo URL; ?>img/equipo8.jpg);"></a>
+					</div>
+					<h5>Juan Carlos Pérez Pérez</h5>
+					<span>Programador Jr.</span>
+				</div>
+			</div>
+		</div>
+		<div class="four columns">
+			<div class="integrante">
+				<div class="foto">
+					<a href="#" style="background: url(<?php echo URL; ?>img/equipo1.png);"></a>
+				</div>
+				<h5>Luis Angel Gutierrez Pérez</h5>
+				<span>Diseño de Interfaz Jr.</span>
 			</div>
 		</div>
 	</div>
